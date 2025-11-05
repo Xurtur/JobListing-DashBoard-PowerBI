@@ -46,11 +46,11 @@
                       "Property": "job_posted_date"
                     }
                   },
-                  "Function": 0
+                  "Function": 5
                 }
               },
               "queryRef": "Sum(Sheet1.job_posted_date)",
-              "nativeQueryRef": "Sum of job_posted_date"
+              "nativeQueryRef": "Count of job_posted_date"
             }
           ]
         }
@@ -70,7 +70,7 @@
                     "Property": "job_posted_date"
                   }
                 },
-                "Function": 0
+                "Function": 5
               }
             },
             "direction": "Descending"
