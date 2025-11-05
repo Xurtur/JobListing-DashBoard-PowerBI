@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Jobs-Dashboard-PowerBI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "346d6c3b-db88-47a1-99ba-056a6513b4e8"
+  }
+}
