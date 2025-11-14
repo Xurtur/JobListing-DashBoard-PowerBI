@@ -1,0 +1,15 @@
+expression 'Errors in Sheet1' =
+		let
+		Source = Sheet1,
+		  #"Added Index" = Table.AddIndexColumn(Source, "Row Number" ,1),
+		  #"Reordered Columns" = Table.ReorderColumns(#"Added Index", {"Row Number", "job_title_short", "job_title", "job_location", "job_via", "job_schedule_type", "job_work_from_home", "search_location", "job_posted_date", "job_no_degree_mention", "job_health_insurance", "job_country", "salary_rate", "salary_year_avg", "salary_hour_avg", "salary_hour_adj", "salary_hr&yr", "company_name", "job_skills", "job_type_skills"}),
+		    salary_rate = #"Reordered Columns"{0}[salary_rate]
+		in
+		  salary_rate
+	lineageTag: adf456f1-d785-4c4c-8430-6bfd4e660a71
+	queryGroup: 'Query Errors - 14/11/2025 10:29:41 am'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

@@ -2,8 +2,4760 @@ cultureInfo en-US
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "sheet_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sheet 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Sheet1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_title_short": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_title_short"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job title short": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_title_short": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "title short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job designation short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "designation short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "job name short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job award short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job call short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job heading short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job label short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "name short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "award short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "call short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Job": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Job Title": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_title": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "title": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "job name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "job award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "job call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "job heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "job label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_location": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_location"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job location": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_location": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "location": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "job placement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "job scene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "job venue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "placement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "scene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "venue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "job address": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "job place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_via": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_via"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job via": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_via": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "occupation via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "profession via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "work via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "trade via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "career via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "employment via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "contract via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "business via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "appointment via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "vacancy via": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_schedule_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_schedule_type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job schedule type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_schedule_type": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "schedule type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job schedule category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "job schedule genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "job schedule manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "job schedule variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "schedule category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "schedule genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "schedule manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "schedule variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "job schedule brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "job schedule class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_work_from_home": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_work_from_home"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job work from home": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_work_from_home": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "work": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job work": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job effort from home": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "job exertion from home": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "job drudgery from home": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "job effort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job exertion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job drudgery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job labor from home": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "job toil from home": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "job slog from home": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "job grind from home": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.search_location": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "search_location"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "search location": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "search_location": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "location": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "search locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "search placement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "search scene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "search venue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "placement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "scene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "venue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "search address": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "search place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_posted_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_posted_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job posted date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_posted_date": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "job posted moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "job posted period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "sheet_1.job_posted_date.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "VariationSource": "job_posted_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job posted date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "sheet_1.job_posted_date.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "VariationSource": "job_posted_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job posted year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job posted date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job posted date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "job posted yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "job posted moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "job posted period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "sheet_1.job_posted_date.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "VariationSource": "job_posted_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job posted quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job posted date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job posted date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "job posted qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "job posted moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "job posted period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "sheet_1.job_posted_date.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "VariationSource": "job_posted_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job posted month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job posted date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job posted date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "job posted mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "job posted moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "job posted period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "sheet_1.job_posted_date.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "VariationSource": "job_posted_date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job posted day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job posted date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job posted moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "job posted period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "sheet_1.job_no_degree_mention": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_no_degree_mention"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job no degree mention": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_no_degree_mention": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "mention": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "degree mention": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "no degree mention": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job number degree mention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "number degree mention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job no degree indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "job no degree discussion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "job no degree allusion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "job no degree declaration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "job no degree statement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "job no degree citation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "no degree indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "no degree discussion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_health_insurance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_health_insurance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job health insurance": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_health_insurance": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "insurance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "health insurance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job health assurance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "job health protection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "job health coverage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "job health indemnification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "job health indemnity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "health assurance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "health protection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "health coverage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "health indemnification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "health indemnity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_country"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_country": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.salary_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "salary_rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salary rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salary_rate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "salary degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "salary frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "salary percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "salary ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "salary quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "salary amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.salary_year_avg": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "salary_year_avg"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salary year avg": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salary_year_avg": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "salary year average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "salary yr avg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.salary_hour_avg": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "salary_hour_avg"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salary hour avg": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salary_hour_avg": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "salary hour average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.company_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "company_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "company name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "company_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "company": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "co": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corporation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corps": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "employer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "enterprise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "company nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "company title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "company label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "company tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_skill": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_skills"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job skill": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skills": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "skill": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job ability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job talent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job cleverness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job dexterity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job expertise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job proficiency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job skillfulness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job handiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job knack": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "job aptitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.job_type_skill": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "job_type_skills"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job type skill": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_type_skills": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "skill": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "type skill": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job category skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "job genre skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "job manner skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "job variety skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "category skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "genre skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "manner skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "variety skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "job brand skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job class skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.salary_hour_adj": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "salary_hour_adj"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salary hour adj": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "salary_hour_adj": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.salary_hryr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "salary_hr&yr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "salary_hr&yr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.date_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "Date_Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Date_Month": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "sheet_1.date_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1",
+			          "ConceptualProperty": "Date_Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Date_Day": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sheet1 (2)": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_title_short": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_title_short"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job title short": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_title_short": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "title short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job designation short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "designation short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "job name short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job award short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job call short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job heading short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "job label short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "name short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "award short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "call short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_title": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "title": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "job designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "job name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "job award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "job call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "job heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "job label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_3": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.3"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.3": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.3": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_4": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.4"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.4": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.4": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_5": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.5"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.5": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.5": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_6": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.6"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.6": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.6": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_7": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.7"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.7": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.7": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_8": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.8"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.8": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.8": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_9": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.9"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.9": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.9": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_10": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.10"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.10": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.10": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_11": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.11"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.11": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.11": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_12": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.12"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.12": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.12": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_13": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.13"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.13": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.13": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_14": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.14"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.14": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.14": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_15": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.15"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.15": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.15": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_16": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.16"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.16": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.16": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "Sheet1_2.job_skills_17": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sheet1 (2)",
+			          "ConceptualProperty": "job_skills.17"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "job_skills.17": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "job_skill.17": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "sheet_1_job_posted_date_date_hierarchy_has_sheet_1_job_posted_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1.job_posted_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date.date_hierarchy"
+			          }
+			        },
+			        "sheet_1.job_posted_date.month": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1.job_posted_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_posted_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "job_posted_date_hierarchies_have_job_posted_months"
+			        }
+			      ]
+			    },
+			    "sheet_1_job_posted_date_date_hierarchy_has_sheet_1_job_posted_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1.job_posted_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date.date_hierarchy"
+			          }
+			        },
+			        "sheet_1.job_posted_date.quarter": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1.job_posted_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_posted_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "job_posted_date_hierarchies_have_job_posted_quarters"
+			        }
+			      ]
+			    },
+			    "sheet_1_job_posted_date_date_hierarchy_has_sheet_1_job_posted_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1.job_posted_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date.date_hierarchy"
+			          }
+			        },
+			        "sheet_1.job_posted_date.year": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1.job_posted_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_posted_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "job_posted_date_hierarchies_have_job_posted_years"
+			        }
+			      ]
+			    },
+			    "sheet_1_job_posted_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1.job_posted_date": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date"
+			          }
+			        },
+			        "sheet_1.job_posted_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1.job_posted_date"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_posted_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "job_posted_dates_have_job_posted_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_17": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_17": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_17"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_17"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_17"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_16": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_16": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_16"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_16"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_16"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_15": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_15": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_15"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_15"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_15"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_14": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_14": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_14"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_14"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_14"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_13": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_13": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_13"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_13"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_13"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_12": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_12": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_12"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_12"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_12"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_11": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_11": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_11"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_11"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_11"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_10": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_10": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_10"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_10"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_10"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_9": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_9": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_9"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_9"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_9"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_8": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_8": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_8"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_8"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_8"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_7": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_7": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_7"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_7"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_7"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_6": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_6": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_6"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_6"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_6"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_5": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_5": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_5"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_5"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_5"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_4": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_4": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_4"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_4"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_4"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_3": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_3": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_3"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_2": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_2"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_skills_1": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_skills_1": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_skills_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_skills_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_skills_1"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_title": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_title": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_titles"
+			        }
+			      ]
+			    },
+			    "Sheet1_2_has_job_title_short": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1 (2)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "Sheet1_2": {
+			          "Target": {
+			            "Entity": "Sheet1_2"
+			          }
+			        },
+			        "Sheet1_2.job_title_short": {
+			          "Target": {
+			            "Entity": "Sheet1_2.job_title_short"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "Sheet1_2"
+			            },
+			            "Object": {
+			              "Role": "Sheet1_2.job_title_short"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Sheet1_2_have_job_title_shorts"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.date_day": {
+			          "Target": {
+			            "Entity": "sheet_1.date_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.date_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_date_days"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.date_month": {
+			          "Target": {
+			            "Entity": "sheet_1.date_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.date_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_date_months"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_salary_hryr": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.salary_hryr": {
+			          "Target": {
+			            "Entity": "sheet_1.salary_hryr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.salary_hryr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_salary_hryrs"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_salary_hour_adj": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.salary_hour_adj": {
+			          "Target": {
+			            "Entity": "sheet_1.salary_hour_adj"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.salary_hour_adj"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_salary_hour_adjs"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_type_skill": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_type_skill": {
+			          "Target": {
+			            "Entity": "sheet_1.job_type_skill"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_type_skill"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_type_skills"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_skill": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_skill": {
+			          "Target": {
+			            "Entity": "sheet_1.job_skill"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_skill"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_skills"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_company_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.company_name": {
+			          "Target": {
+			            "Entity": "sheet_1.company_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.company_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_company_names"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_salary_hour_avg": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.salary_hour_avg": {
+			          "Target": {
+			            "Entity": "sheet_1.salary_hour_avg"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.salary_hour_avg"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_salary_hour_avgs"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_salary_year_avg": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.salary_year_avg": {
+			          "Target": {
+			            "Entity": "sheet_1.salary_year_avg"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.salary_year_avg"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_salary_year_avgs"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_salary_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.salary_rate": {
+			          "Target": {
+			            "Entity": "sheet_1.salary_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.salary_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_salary_rates"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_country": {
+			          "Target": {
+			            "Entity": "sheet_1.job_country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_countries"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_health_insurance": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_health_insurance": {
+			          "Target": {
+			            "Entity": "sheet_1.job_health_insurance"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_health_insurance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_health_insurances"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_no_degree_mention": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_no_degree_mention": {
+			          "Target": {
+			            "Entity": "sheet_1.job_no_degree_mention"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_no_degree_mention"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_no_degree_mentions"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_posted_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_posted_date": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_posted_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_posted_dates"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_search_location": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.search_location": {
+			          "Target": {
+			            "Entity": "sheet_1.search_location"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.search_location"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_search_locations"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_work_from_home": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_work_from_home": {
+			          "Target": {
+			            "Entity": "sheet_1.job_work_from_home"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_work_from_home"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_work_from_home"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_schedule_type": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_schedule_type": {
+			          "Target": {
+			            "Entity": "sheet_1.job_schedule_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_schedule_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_schedule_types"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_via": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_via": {
+			          "Target": {
+			            "Entity": "sheet_1.job_via"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_via"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_via"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Verbs": [
+			              {
+			                "job": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "via": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "sheet_1.job_via"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "sheet_1_job_via_job_via"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_location": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_location": {
+			          "Target": {
+			            "Entity": "sheet_1.job_location"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_location"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_locations"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_title": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_title": {
+			          "Target": {
+			            "Entity": "sheet_1.job_title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_titles"
+			        }
+			      ]
+			    },
+			    "sheet_1_has_job_title_short": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_title_short": {
+			          "Target": {
+			            "Entity": "sheet_1.job_title_short"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_title_short"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_have_job_title_shorts"
+			        }
+			      ]
+			    },
+			    "sheet_1_in_job_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_country": {
+			          "Target": {
+			            "Entity": "sheet_1.job_country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "sheet_1.job_country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "sheet_1.job_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_are_in_job_countries"
+			        }
+			      ]
+			    },
+			    "sheet_1_in_search_location": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.search_location": {
+			          "Target": {
+			            "Entity": "sheet_1.search_location"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "sheet_1.search_location"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "sheet_1.search_location"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_are_in_search_locations"
+			        }
+			      ]
+			    },
+			    "sheet_1_in_job_location": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_location": {
+			          "Target": {
+			            "Entity": "sheet_1.job_location"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "sheet_1.job_location"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "sheet_1"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "sheet_1.job_location"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sheet_1_are_in_job_locations"
+			        }
+			      ]
+			    },
+			    "sheet_1_is_posted_on_job_posted_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1": {
+			          "Target": {
+			            "Entity": "sheet_1"
+			          }
+			        },
+			        "sheet_1.job_posted_date": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "sheet_1.job_posted_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "post": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "sheet_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "sheet_1_are_posted_on_job_posted_dates"
+			        }
+			      ]
+			    },
+			    "sheet_1_job_posted_date_date_hierarchy_has_sheet_1_job_posted_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Sheet1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sheet_1.job_posted_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date.date_hierarchy"
+			          }
+			        },
+			        "sheet_1.job_posted_date.day": {
+			          "Target": {
+			            "Entity": "sheet_1.job_posted_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sheet_1.job_posted_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "sheet_1.job_posted_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "job_posted_date_hierarchies_have_job_posted_days"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
 			}
 		contentType: json
 

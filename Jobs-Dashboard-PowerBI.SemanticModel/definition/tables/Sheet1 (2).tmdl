@@ -1,0 +1,174 @@
+table 'Sheet1 (2)'
+	lineageTag: 77157e78-f3ae-477c-9374-b4229b715091
+
+	column job_title_short
+		dataType: string
+		lineageTag: c0e1ec4e-d314-4fe9-8946-ab1ae97d4457
+		summarizeBy: none
+		sourceColumn: job_title_short
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_title
+		dataType: string
+		lineageTag: 6898205f-cdd9-4f0a-b659-c3d0342b0419
+		summarizeBy: none
+		sourceColumn: job_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.1'
+		dataType: string
+		lineageTag: 38c82295-c30b-406a-bca3-b05505e52d9d
+		summarizeBy: none
+		sourceColumn: job_skills.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.2'
+		dataType: string
+		lineageTag: 73a356f0-59c6-43ac-b253-773808bcfdae
+		summarizeBy: none
+		sourceColumn: job_skills.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.3'
+		dataType: string
+		lineageTag: 24d22d39-5c91-4796-b915-0e8af0480505
+		summarizeBy: none
+		sourceColumn: job_skills.3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.4'
+		dataType: string
+		lineageTag: 87197692-2fc7-4459-9391-ae42d51bb7d0
+		summarizeBy: none
+		sourceColumn: job_skills.4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.5'
+		dataType: string
+		lineageTag: f3b64385-44ea-4921-8ee6-3886e61ab86e
+		summarizeBy: none
+		sourceColumn: job_skills.5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.6'
+		dataType: string
+		lineageTag: 3752dfa5-9907-4ed8-8051-ca5bcf65dd59
+		summarizeBy: none
+		sourceColumn: job_skills.6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.7'
+		dataType: string
+		lineageTag: b90d3c87-fd58-4b51-bf9a-8f924ca2054e
+		summarizeBy: none
+		sourceColumn: job_skills.7
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.8'
+		dataType: string
+		lineageTag: 620c3689-743e-445e-9705-9f6c4dffe8cd
+		summarizeBy: none
+		sourceColumn: job_skills.8
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.9'
+		dataType: string
+		lineageTag: 1cb95316-6581-451c-9d9a-f00edc6b0c8f
+		summarizeBy: none
+		sourceColumn: job_skills.9
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.10'
+		dataType: string
+		lineageTag: 3ab8b9d4-032f-4f7f-a0a1-50e28b138411
+		summarizeBy: none
+		sourceColumn: job_skills.10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.11'
+		dataType: string
+		lineageTag: 2db770f5-50db-49ea-981b-625bc20d8c3b
+		summarizeBy: none
+		sourceColumn: job_skills.11
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.12'
+		dataType: string
+		lineageTag: ddfc9846-3958-41a9-b5b6-c25acc4903a8
+		summarizeBy: none
+		sourceColumn: job_skills.12
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.13'
+		dataType: string
+		lineageTag: 2d38960b-dcc3-464e-9182-47fc1016462d
+		summarizeBy: none
+		sourceColumn: job_skills.13
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.14'
+		dataType: string
+		lineageTag: 4a87d67e-7f4d-4356-8a58-baa25856d2a6
+		summarizeBy: none
+		sourceColumn: job_skills.14
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.15'
+		dataType: string
+		lineageTag: ad1e55cc-b7f2-4611-8693-6652ff558326
+		summarizeBy: none
+		sourceColumn: job_skills.15
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.16'
+		dataType: string
+		lineageTag: 52202ca8-d24e-4840-924a-5b87cd335efc
+		summarizeBy: none
+		sourceColumn: job_skills.16
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'job_skills.17'
+		dataType: string
+		lineageTag: 11006022-67e3-4d7d-90a6-0ba6afcc8835
+		summarizeBy: none
+		sourceColumn: job_skills.17
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sheet1 (2)' = m
+		mode: import
+		source =
+				let
+				    Source = Sheet1,
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"job_location", "job_via", "job_schedule_type", "job_work_from_home", "search_location", "job_posted_date", "job_no_degree_mention", "job_health_insurance", "job_country", "salary_rate", "salary_year_avg", "salary_hour_avg", "salary_hour_adj", "salary_hr&yr", "company_name", "job_type_skills"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Removed Columns","['","",Replacer.ReplaceText,{"job_skills"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","']","",Replacer.ReplaceText,{"job_skills"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","'","",Replacer.ReplaceText,{"job_skills"}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value2", "job_skills", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"job_skills.1", "job_skills.2", "job_skills.3", "job_skills.4", "job_skills.5", "job_skills.6", "job_skills.7", "job_skills.8", "job_skills.9", "job_skills.10", "job_skills.11", "job_skills.12", "job_skills.13", "job_skills.14", "job_skills.15", "job_skills.16", "job_skills.17"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"job_skills.1", type text}, {"job_skills.2", type text}, {"job_skills.3", type text}, {"job_skills.4", type text}, {"job_skills.5", type text}, {"job_skills.6", type text}, {"job_skills.7", type text}, {"job_skills.8", type text}, {"job_skills.9", type text}, {"job_skills.10", type text}, {"job_skills.11", type text}, {"job_skills.12", type text}, {"job_skills.13", type text}, {"job_skills.14", type text}, {"job_skills.15", type text}, {"job_skills.16", type text}, {"job_skills.17", type text}}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Changed Type",{{"job_skills.1", Text.Trim, type text}, {"job_skills.2", Text.Trim, type text}, {"job_skills.3", Text.Trim, type text}, {"job_skills.4", Text.Trim, type text}, {"job_skills.5", Text.Trim, type text}, {"job_skills.6", Text.Trim, type text}, {"job_skills.7", Text.Trim, type text}, {"job_skills.8", Text.Trim, type text}, {"job_skills.9", Text.Trim, type text}, {"job_skills.10", Text.Trim, type text}, {"job_skills.11", Text.Trim, type text}, {"job_skills.12", Text.Trim, type text}, {"job_skills.13", Text.Trim, type text}, {"job_skills.14", Text.Trim, type text}, {"job_skills.15", Text.Trim, type text}, {"job_skills.16", Text.Trim, type text}, {"job_skills.17", Text.Trim, type text}})
+				in
+				    #"Trimmed Text"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

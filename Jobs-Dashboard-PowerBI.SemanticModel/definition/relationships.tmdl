@@ -1,0 +1,5 @@
+relationship 483287dd-73d5-4652-aa73-e2183883691b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Sheet1.job_posted_date
+	toColumn: LocalDateTable_7c1e3716-1a97-4cc4-bc92-d693fc0e249b.Date
+

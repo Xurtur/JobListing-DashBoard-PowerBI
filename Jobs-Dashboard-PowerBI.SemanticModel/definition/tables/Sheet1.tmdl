@@ -59,14 +59,18 @@ table Sheet1
 		annotation SummarizationSetBy = Automatic
 
 	column job_posted_date
-		dataType: double
+		dataType: dateTime
+		formatString: General Date
 		lineageTag: 53b9eba1-4a1b-499b-9ef6-6e85851fbed0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: job_posted_date
 
-		annotation SummarizationSetBy = Automatic
+		variation Variation
+			isDefault
+			relationship: 483287dd-73d5-4652-aa73-e2183883691b
+			defaultHierarchy: LocalDateTable_7c1e3716-1a97-4cc4-bc92-d693fc0e249b.'Date Hierarchy'
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation SummarizationSetBy = Automatic
 
 	column job_no_degree_mention
 		dataType: boolean
@@ -145,6 +149,36 @@ table Sheet1
 
 		annotation SummarizationSetBy = Automatic
 
+	column salary_hour_adj
+		dataType: double
+		lineageTag: f18caba5-3cdd-42e8-915f-79d8d822b200
+		summarizeBy: sum
+		sourceColumn: salary_hour_adj
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column salary_hr&yr
+		dataType: string
+		lineageTag: 3e46a804-3d65-4d36-8789-8ab3911627af
+		summarizeBy: none
+		sourceColumn: salary_hr&yr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date_Month = Sheet1[job_posted_date].[Month]
+		lineageTag: 51ad8345-73e7-4eb2-9f9b-665c8e8426a2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date_Day = FORMAT(Sheet1[job_posted_date].[Date], "dddd")
+		lineageTag: b9d121a0-415e-4209-a377-23cd193ec00b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Sheet1 = m
 		mode: import
 		source =
@@ -152,9 +186,19 @@ table Sheet1
 				    Source = Excel.Workbook(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vQQBMP11EWTJYN_BKDpE8LvMVEhXgv24xSSxt74hSO3kpOl4h5oEOatkQozCZ06wA/pub?output=xlsx"), null, true),
 				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"job_title_short", type text}, {"job_title", type text}, {"job_location", type text}, {"job_via", type text}, {"job_schedule_type", type text}, {"job_work_from_home", type logical}, {"search_location", type text}, {"job_posted_date", type number}, {"job_no_degree_mention", type logical}, {"job_health_insurance", type logical}, {"job_country", type text}, {"salary_rate", type text}, {"salary_year_avg", Int64.Type}, {"salary_hour_avg", type number}, {"company_name", type text}, {"job_skills", type text}, {"job_type_skills", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"job_title_short", type text}, {"job_title", type text}, {"job_location", type text}, {"job_via", type text}, {"job_schedule_type", type text}, {"job_work_from_home", type logical}, {"search_location", type text}, {"job_posted_date", type number}, {"job_no_degree_mention", type logical}, {"job_health_insurance", type logical}, {"job_country", type text}, {"salary_rate", type text}, {"salary_year_avg", Int64.Type}, {"salary_hour_avg", type number}, {"company_name", type text}, {"job_skills", type text}, {"job_type_skills", type text}}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Changed Type","via ","",Replacer.ReplaceText,{"job_via"}),
+				    #"Inserted Multiplication" = Table.AddColumn(#"Replaced Value1", "salary_hour_adj", each [salary_hour_avg] * 2080, type number),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Inserted Multiplication",{"job_title_short", "job_title", "job_location", "job_via", "job_schedule_type", "job_work_from_home", "search_location", "job_posted_date", "job_no_degree_mention", "job_health_insurance", "job_country", "salary_rate", "salary_year_avg", "salary_hour_avg", "salary_hour_adj", "company_name", "job_skills", "job_type_skills"}),
+				    #"Added Custom Column" = Table.AddColumn(#"Reordered Columns", "Custom", each Text.Combine({Text.From([salary_year_avg], "en-PH"), Text.From([salary_hour_adj], "en-PH")}), type text),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Added Custom Column",{"job_title_short", "job_title", "job_location", "job_via", "job_schedule_type", "job_work_from_home", "search_location", "job_posted_date", "job_no_degree_mention", "job_health_insurance", "job_country", "salary_rate", "salary_year_avg", "salary_hour_avg", "salary_hour_adj", "Custom", "company_name", "job_skills", "job_type_skills"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns1",{{"Custom", "salary_hr&yr"}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Renamed Columns", each ([#"salary_hr&yr"] <> "")),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Filtered Rows",{{"job_posted_date", type datetime}})
 				in
-				    #"Changed Type"
+				    #"Changed Type1"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 
