@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "02cbfcd1aac80545cca3",
+  "name": "46642fcc63dc2c00cdd5",
   "position": {
-    "x": 640.22068965517235,
-    "y": 401.87586206896549,
-    "z": 3000,
-    "height": 318.45517241379309,
-    "width": 639.55862068965519,
-    "tabOrder": 2000
+    "x": 640,
+    "y": 384,
+    "z": 4000,
+    "height": 336,
+    "width": 640,
+    "tabOrder": 4000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,14 +23,16 @@
                       "Entity": "Sheet1"
                     }
                   },
-                  "Property": "job_work_from_home"
+                  "Property": "Date_Day"
                 }
               },
-              "queryRef": "Sheet1.job_work_from_home",
-              "nativeQueryRef": "job_work_from_home",
-              "active": true
+              "queryRef": "Sheet1.Date_Day",
+              "nativeQueryRef": "Day",
+              "active": true,
+              "displayName": "Day"
             }
-          ]
+          ],
+          "showAll": true
         },
         "Y": {
           "projections": [
@@ -44,14 +46,15 @@
                           "Entity": "Sheet1"
                         }
                       },
-                      "Property": "job_title_short"
+                      "Property": "job_title"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_title_short)",
-              "nativeQueryRef": "Count of job_title_short"
+              "queryRef": "CountNonNull(Sheet1.job_title)",
+              "nativeQueryRef": "Job Postings",
+              "displayName": "Job Postings"
             }
           ]
         }
@@ -68,7 +71,7 @@
                         "Entity": "Sheet1"
                       }
                     },
-                    "Property": "job_title_short"
+                    "Property": "job_title"
                   }
                 },
                 "Function": 5
@@ -80,28 +83,6 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "legend": [
-        {
-          "properties": {
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Work From Home Jobs'"
-                }
-              }
-            },
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
     "visualContainerObjects": {
       "title": [
         {
@@ -109,14 +90,21 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "''"
+                  "Value": "'Jobs Posted By Day'"
                 }
               }
             },
-            "show": {
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

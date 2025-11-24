@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "e08b576c403cd250b7d7",
+  "name": "e9709533eac0951c5300",
   "position": {
-    "x": 640.22068965517235,
-    "y": 75.475862068965512,
-    "z": 2000,
-    "height": 326.4,
-    "width": 639.55862068965519,
-    "tabOrder": 1000
+    "x": 640,
+    "y": 32,
+    "z": 2001,
+    "height": 344,
+    "width": 640,
+    "tabOrder": 2001
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,12 +23,31 @@
                       "Entity": "Sheet1"
                     }
                   },
-                  "Property": "job_via"
+                  "Property": "company_name"
                 }
               },
-              "queryRef": "Sheet1.job_via",
-              "nativeQueryRef": "Count of job_via",
-              "active": true
+              "queryRef": "Sheet1.company_name",
+              "nativeQueryRef": "Company",
+              "active": true,
+              "displayName": "Company"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sheet1"
+                    }
+                  },
+                  "Property": "job_title_short"
+                }
+              },
+              "queryRef": "Sheet1.job_title_short",
+              "nativeQueryRef": "job_title_short"
             }
           ]
         },
@@ -44,14 +63,15 @@
                           "Entity": "Sheet1"
                         }
                       },
-                      "Property": "job_title_short"
+                      "Property": "job_via"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_title_short)",
-              "nativeQueryRef": "Count of job_title_short"
+              "queryRef": "CountNonNull(Sheet1.job_via)",
+              "nativeQueryRef": "Job Posting",
+              "displayName": "Job Posting"
             }
           ]
         }
@@ -68,7 +88,7 @@
                         "Entity": "Sheet1"
                       }
                     },
-                    "Property": "job_title_short"
+                    "Property": "job_via"
                   }
                 },
                 "Function": 5
@@ -84,10 +104,17 @@
       "legend": [
         {
           "properties": {
-            "titleText": {
+            "showGradientLegend": {
               "expr": {
                 "Literal": {
-                  "Value": "'Job Source'"
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -102,7 +129,41 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 10 Websites For Job Listing'"
+                  "Value": "'Top 10 Companies in Website'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -115,7 +176,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "eded5643eccd8807914e",
+        "name": "e5c83158222768ea2e38",
         "field": {
           "Column": {
             "Expression": {
@@ -123,7 +184,7 @@
                 "Entity": "Sheet1"
               }
             },
-            "Property": "job_via"
+            "Property": "company_name"
           }
         },
         "type": "TopN",
@@ -151,7 +212,7 @@
                               "Source": "s"
                             }
                           },
-                          "Property": "job_via"
+                          "Property": "company_name"
                         },
                         "Name": "field"
                       }
@@ -168,7 +229,7 @@
                                     "Source": "s"
                                   }
                                 },
-                                "Property": "job_title_short"
+                                "Property": "job_via"
                               }
                             },
                             "Function": 5
@@ -200,7 +261,7 @@
                             "Source": "s"
                           }
                         },
-                        "Property": "job_via"
+                        "Property": "company_name"
                       }
                     }
                   ],
@@ -213,25 +274,10 @@
               }
             }
           ]
-        },
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
         }
       },
       {
-        "name": "11902291a08ad8063a81",
+        "name": "8d706f661dab046ca690",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -241,13 +287,27 @@
                     "Entity": "Sheet1"
                   }
                 },
-                "Property": "job_title_short"
+                "Property": "job_via"
               }
             },
             "Function": 5
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "e628d1c84078b313bb6d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "job_title_short"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

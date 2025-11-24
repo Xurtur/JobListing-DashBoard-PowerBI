@@ -33,14 +33,6 @@ table Sheet1
 
 		annotation SummarizationSetBy = Automatic
 
-	column job_schedule_type
-		dataType: string
-		lineageTag: 6b4f5d8c-c90e-4aaf-bda9-ddc9cdb986f9
-		summarizeBy: none
-		sourceColumn: job_schedule_type
-
-		annotation SummarizationSetBy = Automatic
-
 	column job_work_from_home
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
@@ -179,6 +171,14 @@ table Sheet1
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Job Schedule Type'
+		dataType: string
+		lineageTag: b644553b-c3d9-4499-a7a0-66a385edb3cf
+		summarizeBy: none
+		sourceColumn: Job Schedule Type
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Sheet1 = m
 		mode: import
 		source =
@@ -194,9 +194,16 @@ table Sheet1
 				    #"Reordered Columns1" = Table.ReorderColumns(#"Added Custom Column",{"job_title_short", "job_title", "job_location", "job_via", "job_schedule_type", "job_work_from_home", "search_location", "job_posted_date", "job_no_degree_mention", "job_health_insurance", "job_country", "salary_rate", "salary_year_avg", "salary_hour_avg", "salary_hour_adj", "Custom", "company_name", "job_skills", "job_type_skills"}),
 				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns1",{{"Custom", "salary_hr&yr"}}),
 				    #"Filtered Rows" = Table.SelectRows(#"Renamed Columns", each ([#"salary_hr&yr"] <> "")),
-				    #"Changed Type1" = Table.TransformColumnTypes(#"Filtered Rows",{{"job_posted_date", type datetime}})
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Filtered Rows",{{"job_posted_date", type datetime}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type1",", and ",", ",Replacer.ReplaceText,{"job_schedule_type"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value"," and",", ",Replacer.ReplaceText,{"job_schedule_type"}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value2", "job_schedule_type", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"job_schedule_type.1", "job_schedule_type.2", "job_schedule_type.3"}),
+				    #"Unpivoted Only Selected Columns" = Table.Unpivot(#"Split Column by Delimiter", {"job_schedule_type.1", "job_schedule_type.2", "job_schedule_type.3"}, "Attribute", "Value"),
+				    #"Removed Columns" = Table.RemoveColumns(#"Unpivoted Only Selected Columns",{"Attribute"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Removed Columns",{{"Value", Text.Trim, type text}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Trimmed Text",{{"Value", "Job Schedule Type"}})
 				in
-				    #"Changed Type1"
+				    #"Renamed Columns1"
 
 	annotation PBI_ResultType = Table
 

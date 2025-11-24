@@ -1,16 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "e08b576c403cd250b7d7",
+  "name": "cd9501b2dede05aca64e",
   "position": {
-    "x": 640.22068965517235,
-    "y": 75.475862068965512,
-    "z": 2000,
-    "height": 326.4,
-    "width": 639.55862068965519,
-    "tabOrder": 1000
+    "x": 0,
+    "y": 40,
+    "z": 1000,
+    "height": 336,
+    "width": 640
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +22,11 @@
                       "Entity": "Sheet1"
                     }
                   },
-                  "Property": "job_via"
+                  "Property": "job_title"
                 }
               },
-              "queryRef": "Sheet1.job_via",
-              "nativeQueryRef": "Count of job_via",
+              "queryRef": "Sheet1.job_title",
+              "nativeQueryRef": "job_title",
               "active": true
             }
           ]
@@ -44,14 +43,14 @@
                           "Entity": "Sheet1"
                         }
                       },
-                      "Property": "job_title_short"
+                      "Property": "job_title"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_title_short)",
-              "nativeQueryRef": "Count of job_title_short"
+              "queryRef": "CountNonNull(Sheet1.job_title)",
+              "nativeQueryRef": "Count of job_title"
             }
           ]
         }
@@ -68,7 +67,7 @@
                         "Entity": "Sheet1"
                       }
                     },
-                    "Property": "job_title_short"
+                    "Property": "job_title"
                   }
                 },
                 "Function": 5
@@ -80,21 +79,6 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "legend": [
-        {
-          "properties": {
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Job Source'"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
     "visualContainerObjects": {
       "title": [
         {
@@ -102,7 +86,21 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 10 Websites For Job Listing'"
+                  "Value": "'Jobs Posted'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -115,7 +113,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "eded5643eccd8807914e",
+        "name": "687f403acbd3e5800a31",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
@@ -123,7 +122,7 @@
                 "Entity": "Sheet1"
               }
             },
-            "Property": "job_via"
+            "Property": "job_title"
           }
         },
         "type": "TopN",
@@ -151,7 +150,7 @@
                               "Source": "s"
                             }
                           },
-                          "Property": "job_via"
+                          "Property": "job_title"
                         },
                         "Name": "field"
                       }
@@ -168,10 +167,10 @@
                                     "Source": "s"
                                   }
                                 },
-                                "Property": "job_title_short"
+                                "Property": "job_title"
                               }
                             },
-                            "Function": 5
+                            "Function": 3
                           }
                         }
                       }
@@ -200,7 +199,7 @@
                             "Source": "s"
                           }
                         },
-                        "Property": "job_via"
+                        "Property": "job_title"
                       }
                     }
                   ],
@@ -213,25 +212,10 @@
               }
             }
           ]
-        },
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
         }
       },
       {
-        "name": "11902291a08ad8063a81",
+        "name": "867eeb94801472592cab",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -241,7 +225,7 @@
                     "Entity": "Sheet1"
                   }
                 },
-                "Property": "job_title_short"
+                "Property": "job_title"
               }
             },
             "Function": 5
@@ -249,6 +233,7 @@
         },
         "type": "Advanced"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }

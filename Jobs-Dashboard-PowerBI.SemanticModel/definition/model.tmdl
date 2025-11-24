@@ -15,12 +15,11 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["Sheet1","Errors in Sheet1","Sheet1 (2)"]
+annotation PBI_QueryOrder = ["Sheet1","Errors in Sheet1"]
 
 ref table Sheet1
 ref table DateTableTemplate_6d638f94-23cf-49c4-b785-06a703b34633
 ref table LocalDateTable_7c1e3716-1a97-4cc4-bc92-d693fc0e249b
-ref table 'Sheet1 (2)'
 
 ref cultureInfo en-US
 

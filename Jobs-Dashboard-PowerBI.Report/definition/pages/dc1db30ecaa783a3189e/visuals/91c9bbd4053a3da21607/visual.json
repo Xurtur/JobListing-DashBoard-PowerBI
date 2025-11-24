@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "02cbfcd1aac80545cca3",
+  "name": "91c9bbd4053a3da21607",
   "position": {
-    "x": 640.22068965517235,
-    "y": 401.87586206896549,
-    "z": 3000,
-    "height": 318.45517241379309,
-    "width": 639.55862068965519,
-    "tabOrder": 2000
+    "x": 0,
+    "y": 376,
+    "z": 2000,
+    "height": 344,
+    "width": 640,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "donutChart",
@@ -23,12 +23,13 @@
                       "Entity": "Sheet1"
                     }
                   },
-                  "Property": "job_work_from_home"
+                  "Property": "job_health_insurance"
                 }
               },
-              "queryRef": "Sheet1.job_work_from_home",
-              "nativeQueryRef": "job_work_from_home",
-              "active": true
+              "queryRef": "Sheet1.job_health_insurance",
+              "nativeQueryRef": "Jobs With Health Insurance",
+              "active": true,
+              "displayName": "Jobs With Health Insurance"
             }
           ]
         },
@@ -44,14 +45,14 @@
                           "Entity": "Sheet1"
                         }
                       },
-                      "Property": "job_title_short"
+                      "Property": "job_health_insurance"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_title_short)",
-              "nativeQueryRef": "Count of job_title_short"
+              "queryRef": "CountNonNull(Sheet1.job_health_insurance)",
+              "nativeQueryRef": "job_health_insurance"
             }
           ]
         }
@@ -68,7 +69,7 @@
                         "Entity": "Sheet1"
                       }
                     },
-                    "Property": "job_title_short"
+                    "Property": "job_health_insurance"
                   }
                 },
                 "Function": 5
@@ -80,18 +81,25 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "legend": [
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
-            "titleText": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Work From Home Jobs'"
+                  "Value": "'Jobs With Health Insurance'"
                 }
               }
             },
-            "showTitle": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -102,28 +110,43 @@
         }
       ]
     },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "''"
-                }
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f1e7bb7f3dc51ae7c473",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "job_health_insurance"
               }
             },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
+            "Function": 5
           }
-        }
-      ]
-    },
-    "drillFilterOtherVisuals": true
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "83d850e607b05dbc2ba6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "job_health_insurance"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

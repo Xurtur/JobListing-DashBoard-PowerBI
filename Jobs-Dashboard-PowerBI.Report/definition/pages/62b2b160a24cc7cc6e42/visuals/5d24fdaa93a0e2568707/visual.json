@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "02cbfcd1aac80545cca3",
+  "name": "5d24fdaa93a0e2568707",
   "position": {
-    "x": 640.22068965517235,
-    "y": 401.87586206896549,
+    "x": 640,
+    "y": 40,
     "z": 3000,
-    "height": 318.45517241379309,
-    "width": 639.55862068965519,
+    "height": 344,
+    "width": 640,
     "tabOrder": 2000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "areaChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,12 +23,13 @@
                       "Entity": "Sheet1"
                     }
                   },
-                  "Property": "job_work_from_home"
+                  "Property": "job_title"
                 }
               },
-              "queryRef": "Sheet1.job_work_from_home",
-              "nativeQueryRef": "job_work_from_home",
-              "active": true
+              "queryRef": "Sheet1.job_title",
+              "nativeQueryRef": "Job Title",
+              "active": true,
+              "displayName": "Job Title"
             }
           ]
         },
@@ -44,14 +45,15 @@
                           "Entity": "Sheet1"
                         }
                       },
-                      "Property": "job_title_short"
+                      "Property": "company_name"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_title_short)",
-              "nativeQueryRef": "Count of job_title_short"
+              "queryRef": "CountNonNull(Sheet1.company_name)",
+              "nativeQueryRef": "Company Posting",
+              "displayName": "Company Posting"
             }
           ]
         }
@@ -68,7 +70,7 @@
                         "Entity": "Sheet1"
                       }
                     },
-                    "Property": "job_title_short"
+                    "Property": "company_name"
                   }
                 },
                 "Function": 5
@@ -80,18 +82,25 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "legend": [
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
-            "titleText": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Work From Home Jobs'"
+                  "Value": "'Job Listings Per Role'"
                 }
               }
             },
-            "showTitle": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -102,28 +111,43 @@
         }
       ]
     },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "''"
-                }
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "95d396d0a07a2e48b2d5",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "company_name"
               }
             },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
+            "Function": 5
           }
-        }
-      ]
-    },
-    "drillFilterOtherVisuals": true
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fb90581430729d5ac503",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "job_title"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "02cbfcd1aac80545cca3",
+  "name": "a7f74415691653784d62",
   "position": {
-    "x": 640.22068965517235,
-    "y": 401.87586206896549,
-    "z": 3000,
-    "height": 318.45517241379309,
-    "width": 639.55862068965519,
-    "tabOrder": 2000
+    "x": 640,
+    "y": 376,
+    "z": 2002,
+    "height": 344,
+    "width": 640,
+    "tabOrder": 2002
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "pieChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,12 +23,13 @@
                       "Entity": "Sheet1"
                     }
                   },
-                  "Property": "job_work_from_home"
+                  "Property": "job_no_degree_mention"
                 }
               },
-              "queryRef": "Sheet1.job_work_from_home",
-              "nativeQueryRef": "job_work_from_home",
-              "active": true
+              "queryRef": "Sheet1.job_no_degree_mention",
+              "nativeQueryRef": "Jobs",
+              "active": true,
+              "displayName": "Jobs"
             }
           ]
         },
@@ -44,14 +45,14 @@
                           "Entity": "Sheet1"
                         }
                       },
-                      "Property": "job_title_short"
+                      "Property": "job_no_degree_mention"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_title_short)",
-              "nativeQueryRef": "Count of job_title_short"
+              "queryRef": "CountNonNull(Sheet1.job_no_degree_mention)",
+              "nativeQueryRef": "Count of job_no_degree_mention"
             }
           ]
         }
@@ -68,7 +69,7 @@
                         "Entity": "Sheet1"
                       }
                     },
-                    "Property": "job_title_short"
+                    "Property": "job_no_degree_mention"
                   }
                 },
                 "Function": 5
@@ -80,18 +81,25 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "legend": [
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
-            "titleText": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Work From Home Jobs'"
+                  "Value": "'Jobs Requiring Degree'"
                 }
               }
             },
-            "showTitle": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -102,28 +110,43 @@
         }
       ]
     },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "''"
-                }
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ebbddb1d1be21229a837",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sheet1"
+                  }
+                },
+                "Property": "job_no_degree_mention"
               }
             },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
+            "Function": 5
           }
-        }
-      ]
-    },
-    "drillFilterOtherVisuals": true
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fef2c118dd0a835086c5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sheet1"
+              }
+            },
+            "Property": "job_no_degree_mention"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
