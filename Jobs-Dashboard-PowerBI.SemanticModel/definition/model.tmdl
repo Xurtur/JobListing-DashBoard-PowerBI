@@ -6,20 +6,18 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-/// Errors in queries that were loaded on 14/11/2025 10:29:41 am.
-queryGroup 'Query Errors - 14/11/2025 10:29:41 am'
-
-	annotation PBI_QueryGroupOrder = 0
-
 annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["Sheet1","Errors in Sheet1"]
+annotation PBI_QueryOrder = ["job_postings_fact","skills_dim","skills_job_dim","company_dim"]
 
-ref table Sheet1
 ref table DateTableTemplate_6d638f94-23cf-49c4-b785-06a703b34633
-ref table LocalDateTable_7c1e3716-1a97-4cc4-bc92-d693fc0e249b
+ref table job_postings_fact
+ref table LocalDateTable_9126415f-c6a6-44c7-8959-1fc7280175ea
+ref table skills_dim
+ref table skills_job_dim
+ref table company_dim
 
 ref cultureInfo en-US
 

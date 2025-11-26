@@ -4,10 +4,10 @@
   "position": {
     "x": 640,
     "y": 32,
-    "z": 2001,
+    "z": 3000,
     "height": 344,
     "width": 640,
-    "tabOrder": 2001
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "columnChart",
@@ -275,39 +275,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "8d706f661dab046ca690",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "job_via"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e628d1c84078b313bb6d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "job_title_short"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

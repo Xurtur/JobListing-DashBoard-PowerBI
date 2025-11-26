@@ -4,10 +4,10 @@
   "position": {
     "x": 640,
     "y": 376,
-    "z": 2002,
+    "z": 4000,
     "height": 344,
     "width": 640,
-    "tabOrder": 2002
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "pieChart",
@@ -111,42 +111,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ebbddb1d1be21229a837",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "job_no_degree_mention"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fef2c118dd0a835086c5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "job_no_degree_mention"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

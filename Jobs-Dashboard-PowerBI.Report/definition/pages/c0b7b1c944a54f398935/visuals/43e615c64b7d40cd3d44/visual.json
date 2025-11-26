@@ -4,9 +4,10 @@
   "position": {
     "x": 0,
     "y": 401.87586206896549,
-    "z": 1000,
+    "z": 0,
     "height": 318.45517241379309,
-    "width": 640.22068965517235
+    "width": 640.22068965517235,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "treemap",
@@ -19,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "job_postings_fact"
                     }
                   },
                   "Property": "job_title_short"
                 }
               },
-              "queryRef": "Sheet1.job_title_short",
+              "queryRef": "job_postings_fact.job_title_short",
               "nativeQueryRef": "job_title_short",
-              "active": true,
-              "displayName": "Job Title"
+              "active": true
             }
           ]
         },
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "job_postings_fact"
                         }
                       },
                       "Property": "salary_year_avg"
@@ -50,7 +50,7 @@
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(Sheet1.salary_year_avg)",
+              "queryRef": "Sum(job_postings_fact.salary_year_avg)",
               "nativeQueryRef": "Average of salary_year_avg"
             }
           ]
@@ -124,5 +124,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "000e6acf3948297e91c1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "job_postings_fact"
+                  }
+                },
+                "Property": "salary_year_avg"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c6c31804ed9004d3e05a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_title_short"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -6,7 +6,8 @@
     "y": 40,
     "z": 1000,
     "height": 336,
-    "width": 640
+    "width": 640,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "columnChart",
@@ -213,25 +214,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "867eeb94801472592cab",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "job_title"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

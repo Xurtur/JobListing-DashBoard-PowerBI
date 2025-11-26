@@ -10,16 +10,55 @@
       "nodes": [
         {
           "location": {
-            "x": 134,
-            "y": 79
+            "x": 284,
+            "y": 88.875
           },
-          "nodeIndex": "Sheet1",
-          "nodeLineageTag": "2f67beb9-434a-4516-99db-483730865776",
+          "nodeIndex": "job_postings_fact",
+          "nodeLineageTag": "1440d18b-85d2-4b47-8955-8441e7052d5a",
           "size": {
             "height": 300,
             "width": 234
           },
           "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1382,
+            "y": 413
+          },
+          "nodeIndex": "skills_dim",
+          "nodeLineageTag": "23f530f2-57aa-4c66-8ad4-1f1b2de0d1c3",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 856,
+            "y": 520.625
+          },
+          "nodeIndex": "skills_job_dim",
+          "nodeLineageTag": "9c8fec1c-3505-4bc2-8735-32aa5314ab4c",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 927,
+            "y": 191.3125
+          },
+          "nodeIndex": "company_dim",
+          "nodeLineageTag": "df54598e-f290-4141-b0ba-8fb7392f01fe",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

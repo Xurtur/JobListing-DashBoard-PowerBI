@@ -1,5 +1,17 @@
-relationship 483287dd-73d5-4652-aa73-e2183883691b
+relationship 3ef51320-ef7c-4748-9958-fd5d45d7276f
 	joinOnDateBehavior: datePartOnly
-	fromColumn: Sheet1.job_posted_date
-	toColumn: LocalDateTable_7c1e3716-1a97-4cc4-bc92-d693fc0e249b.Date
+	fromColumn: job_postings_fact.job_posted_date
+	toColumn: LocalDateTable_9126415f-c6a6-44c7-8959-1fc7280175ea.Date
+
+relationship AutoDetected_da1e396b-f61b-41f1-b64e-56c07eca676c
+	fromColumn: skills_job_dim.job_id
+	toColumn: job_postings_fact.job_id
+
+relationship AutoDetected_461f71b1-d081-4a1f-b517-63019e0fbdda
+	fromColumn: skills_job_dim.skill_id
+	toColumn: skills_dim.skill_id
+
+relationship AutoDetected_7e475f54-e8de-4927-8f46-fd6c52657193
+	fromColumn: job_postings_fact.company_id
+	toColumn: company_dim.company_id
 

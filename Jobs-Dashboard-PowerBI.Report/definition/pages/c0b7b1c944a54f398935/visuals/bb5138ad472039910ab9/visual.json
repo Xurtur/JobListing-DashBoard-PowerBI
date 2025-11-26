@@ -1,33 +1,44 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "02cbfcd1aac80545cca3",
+  "name": "bb5138ad472039910ab9",
   "position": {
     "x": 640.22068965517235,
     "y": 401.87586206896549,
-    "z": 3000,
+    "z": 6000,
     "height": 318.45517241379309,
     "width": 639.55862068965519,
-    "tabOrder": 2000
+    "tabOrder": 5000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "areaChart",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "HierarchyLevel": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Sheet1"
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "job_postings_fact"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "job_posted_date"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
                     }
                   },
-                  "Property": "job_work_from_home"
+                  "Level": "Month"
                 }
               },
-              "queryRef": "Sheet1.job_work_from_home",
-              "nativeQueryRef": "job_work_from_home",
+              "queryRef": "job_postings_fact.job_posted_date.Variation.Date Hierarchy.Month",
+              "nativeQueryRef": "job_posted_date Month",
               "active": true
             }
           ]
@@ -41,7 +52,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "job_postings_fact"
                         }
                       },
                       "Property": "job_title_short"
@@ -50,51 +61,21 @@
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_title_short)",
+              "queryRef": "CountNonNull(job_postings_fact.job_title_short)",
               "nativeQueryRef": "Count of job_title_short"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Sheet1"
-                      }
-                    },
-                    "Property": "job_title_short"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "legend": [
+      "valueAxis": [
         {
           "properties": {
-            "titleText": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "'Work From Home Jobs'"
-                }
-              }
-            },
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -109,14 +90,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "''"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "'Job Postings By Month'"
                 }
               }
             }

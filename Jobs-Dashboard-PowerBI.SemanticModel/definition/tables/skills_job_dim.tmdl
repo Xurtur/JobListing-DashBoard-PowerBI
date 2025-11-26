@@ -1,0 +1,34 @@
+table skills_job_dim
+	lineageTag: 9c8fec1c-3505-4bc2-8735-32aa5314ab4c
+
+	column job_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c5324ebc-9fad-4e29-8a53-c3d04c3f6070
+		summarizeBy: none
+		sourceColumn: job_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column skill_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e6d4420-66a7-4568-80cd-e51376549aa4
+		summarizeBy: none
+		sourceColumn: skill_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition skills_job_dim = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vSXq4U6J0PpwzX3osXAzJgd58GKBllHGru2mSt_JhI0jSKKX3bDz4X9bxhDO5BWt8qUeZ1p0CrFC3AK/pub?output=xlsx"), null, true),
+				    skills_job_dim_Sheet = Source{[Item="skills_job_dim",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(skills_job_dim_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"job_id", Int64.Type}, {"skill_id", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -6,8 +6,7 @@
     "y": 384,
     "z": 2000,
     "height": 336,
-    "width": 640,
-    "tabOrder": 1000
+    "width": 640
   },
   "visual": {
     "visualType": "columnChart",
@@ -111,42 +110,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "09e8ccc51be53baa28ed",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet1"
-              }
-            },
-            "Property": "Job Schedule Type"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7d7638cf33d6ab616924",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet1"
-                  }
-                },
-                "Property": "job_title_short"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

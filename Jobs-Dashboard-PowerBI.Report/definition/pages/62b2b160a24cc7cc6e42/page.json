@@ -8,111 +8,33 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "16ffb071802006a408a1",
+        "name": "9e0116ae80e997ce4170",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "company_dim"
               }
             },
-            "Property": "company_name"
+            "Property": "name"
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "s",
-              "Entity": "Sheet1",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "s"
-                          }
-                        },
-                        "Property": "company_name"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Upwork'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "Drillthrough"
       },
       {
-        "name": "709e9953634a652eebb0",
+        "name": "767f12a0a1ca3ac6d97e",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "job_postings_fact"
               }
             },
             "Property": "job_title_short"
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "s",
-              "Entity": "Sheet1",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "s"
-                          }
-                        },
-                        "Property": "job_title_short"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Data Scientist'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "Drillthrough"
       }
     ]
@@ -122,27 +44,27 @@
     "type": "Drillthrough",
     "parameters": [
       {
-        "name": "aa55f920dcb70b9b0701",
-        "boundFilter": "16ffb071802006a408a1",
+        "name": "a8bbafaf6140e2c003a9",
+        "boundFilter": "9e0116ae80e997ce4170",
         "fieldExpr": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "company_dim"
               }
             },
-            "Property": "company_name"
+            "Property": "name"
           }
         }
       },
       {
-        "name": "11f9f315c80694840111",
-        "boundFilter": "709e9953634a652eebb0",
+        "name": "aa96c219683d205ed811",
+        "boundFilter": "767f12a0a1ca3ac6d97e",
         "fieldExpr": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "job_postings_fact"
               }
             },
             "Property": "job_title_short"

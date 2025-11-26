@@ -5,9 +5,72 @@
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c8af7d1b5759e652b200",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "company_dim"
+              }
+            },
+            "Property": "name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "47e26bb151861c392099",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_title_short"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
   "pageBinding": {
     "name": "434cca1056710a5d4037",
-    "type": "Default",
-    "parameters": []
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "10a413a1d10803a72391",
+        "boundFilter": "c8af7d1b5759e652b200",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "company_dim"
+              }
+            },
+            "Property": "name"
+          }
+        }
+      },
+      {
+        "name": "deb42c2094345b45eb42",
+        "boundFilter": "47e26bb151861c392099",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_title_short"
+          }
+        }
+      }
+    ]
   }
 }

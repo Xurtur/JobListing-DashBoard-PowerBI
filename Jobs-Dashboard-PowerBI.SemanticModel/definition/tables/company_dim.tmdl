@@ -1,0 +1,33 @@
+table company_dim
+	lineageTag: df54598e-f290-4141-b0ba-8fb7392f01fe
+
+	column company_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0207f26c-fa9a-4b8f-9aa9-ab99e362eddc
+		summarizeBy: none
+		sourceColumn: company_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 00615eb9-495b-410c-934c-0f3d85cb5e78
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition company_dim = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vTKA9iVqqZ9FyU8AUzhcPepJmRTy0sow8f-uwwZSGhDOCJwJTfqAwo_esor6d-ls0vW_WnfqRR6Kkm7/pub?output=xlsx"), null, true),
+				    company_dim_Sheet = Source{[Item="company_dim",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(company_dim_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"company_id", Int64.Type}, {"name", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
