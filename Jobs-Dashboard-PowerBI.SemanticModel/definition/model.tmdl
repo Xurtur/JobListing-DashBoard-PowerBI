@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["job_postings_fact","skills_dim","skills_job_dim","company_dim"]
+annotation PBI_QueryOrder = ["job_postings_fact","skills_dim","skills_job_dim","company_dim","JobSchedule","JobSkills"]
 
 ref table DateTableTemplate_6d638f94-23cf-49c4-b785-06a703b34633
 ref table job_postings_fact
@@ -18,6 +18,9 @@ ref table LocalDateTable_9126415f-c6a6-44c7-8959-1fc7280175ea
 ref table skills_dim
 ref table skills_job_dim
 ref table company_dim
+ref table JobSchedule
+ref table JobSkills
+ref table LocalDateTable_c718cf7f-2193-4e78-989f-1b0695a4fceb
 
 ref cultureInfo en-US
 

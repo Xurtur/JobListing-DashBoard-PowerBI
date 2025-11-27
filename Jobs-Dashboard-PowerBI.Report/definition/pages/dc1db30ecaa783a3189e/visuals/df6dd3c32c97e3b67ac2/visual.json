@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "cd9501b2dede05aca64e",
+  "name": "df6dd3c32c97e3b67ac2",
   "position": {
     "x": 0,
     "y": 40,
-    "z": 1000,
+    "z": 4001,
     "height": 336,
     "width": 640,
-    "tabOrder": 4000
+    "tabOrder": 4001
   },
   "visual": {
-    "visualType": "columnChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,15 +20,33 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "job_postings_fact"
                     }
                   },
-                  "Property": "job_title"
+                  "Property": "job_title_short"
                 }
               },
-              "queryRef": "Sheet1.job_title",
-              "nativeQueryRef": "job_title",
+              "queryRef": "job_postings_fact.job_title_short",
+              "nativeQueryRef": "job_title_short",
               "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "job_postings_fact"
+                    }
+                  },
+                  "Property": "job_title_short"
+                }
+              },
+              "queryRef": "job_postings_fact.job_title_short",
+              "nativeQueryRef": "job_title_short"
             }
           ]
         },
@@ -41,17 +59,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "job_postings_fact"
                         }
                       },
-                      "Property": "job_title"
+                      "Property": "job_title_short"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_title)",
-              "nativeQueryRef": "Count of job_title"
+              "queryRef": "CountNonNull(job_postings_fact.job_title_short)",
+              "nativeQueryRef": "Count of job_title_short"
             }
           ]
         }
@@ -65,10 +83,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Sheet1"
+                        "Entity": "job_postings_fact"
                       }
                     },
-                    "Property": "job_title"
+                    "Property": "job_title_short"
                   }
                 },
                 "Function": 5
@@ -80,28 +98,21 @@
         "isDefaultSort": true
       }
     },
-    "visualContainerObjects": {
-      "title": [
+    "objects": {
+      "legend": [
         {
           "properties": {
-            "text": {
+            "showGradientLegend": {
               "expr": {
                 "Literal": {
-                  "Value": "'Jobs Posted'"
+                  "Value": "false"
                 }
               }
             },
-            "alignment": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -114,16 +125,16 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "687f403acbd3e5800a31",
+        "name": "13bd4ab4e8965454c2c5",
         "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "job_postings_fact"
               }
             },
-            "Property": "job_title"
+            "Property": "job_title_short"
           }
         },
         "type": "TopN",
@@ -138,8 +149,8 @@
                     "Version": 2,
                     "From": [
                       {
-                        "Name": "s",
-                        "Entity": "Sheet1",
+                        "Name": "j",
+                        "Entity": "job_postings_fact",
                         "Type": 0
                       }
                     ],
@@ -148,10 +159,10 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "s"
+                              "Source": "j"
                             }
                           },
-                          "Property": "job_title"
+                          "Property": "job_title_short"
                         },
                         "Name": "field"
                       }
@@ -165,13 +176,13 @@
                               "Column": {
                                 "Expression": {
                                   "SourceRef": {
-                                    "Source": "s"
+                                    "Source": "j"
                                   }
                                 },
-                                "Property": "job_title"
+                                "Property": "job_title_short"
                               }
                             },
-                            "Function": 3
+                            "Function": 5
                           }
                         }
                       }
@@ -183,8 +194,8 @@
               "Type": 2
             },
             {
-              "Name": "s",
-              "Entity": "Sheet1",
+              "Name": "j",
+              "Entity": "job_postings_fact",
               "Type": 0
             }
           ],
@@ -197,10 +208,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "s"
+                            "Source": "j"
                           }
                         },
-                        "Property": "job_title"
+                        "Property": "job_title_short"
                       }
                     }
                   ],
@@ -214,6 +225,26 @@
             }
           ]
         }
+      },
+      {
+        "name": "db4af7d4be82ea6884e1",
+        "ordinal": 1,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "job_postings_fact"
+                  }
+                },
+                "Property": "job_title_short"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

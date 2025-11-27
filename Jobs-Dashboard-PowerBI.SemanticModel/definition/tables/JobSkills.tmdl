@@ -1,10 +1,10 @@
-table job_postings_fact
-	lineageTag: 1440d18b-85d2-4b47-8955-8441e7052d5a
+table JobSkills
+	lineageTag: eb1aa5c2-aa76-4c87-abcd-3915767194c4
 
 	column job_id
 		dataType: int64
 		formatString: 0
-		lineageTag: 096d9e29-3d90-456d-b6c9-d9146b6b59fb
+		lineageTag: 7cdc558e-43eb-44eb-81d6-b3c0008ef41c
 		summarizeBy: none
 		sourceColumn: job_id
 
@@ -13,15 +13,15 @@ table job_postings_fact
 	column company_id
 		dataType: int64
 		formatString: 0
-		lineageTag: 60b9dd75-0340-4f9b-b986-9d7de2e0abe6
-		summarizeBy: none
+		lineageTag: eb7de328-d1cf-4ba5-a146-25e83515be4f
+		summarizeBy: sum
 		sourceColumn: company_id
 
 		annotation SummarizationSetBy = Automatic
 
 	column job_title_short
 		dataType: string
-		lineageTag: 2dfe8563-4d87-40e4-a643-913401ed8684
+		lineageTag: 7d85a808-e45d-4240-8e2d-834bf25a92af
 		summarizeBy: none
 		sourceColumn: job_title_short
 
@@ -29,7 +29,7 @@ table job_postings_fact
 
 	column job_title
 		dataType: string
-		lineageTag: 3f762bca-d20c-4709-8f6e-f4fb5aaeddea
+		lineageTag: db690936-b421-47b4-8689-5671bdd0f3b8
 		summarizeBy: none
 		sourceColumn: job_title
 
@@ -37,7 +37,7 @@ table job_postings_fact
 
 	column job_location
 		dataType: string
-		lineageTag: c929976a-a80f-4596-8645-9d3443b1f932
+		lineageTag: 4d1e7213-99c7-4d90-8463-a9adefc99519
 		summarizeBy: none
 		sourceColumn: job_location
 
@@ -45,7 +45,7 @@ table job_postings_fact
 
 	column job_via
 		dataType: string
-		lineageTag: 17d31714-aa87-4419-a8ec-9648160d5d5f
+		lineageTag: 1119aee3-f1ff-4c51-a03a-2544e365db57
 		summarizeBy: none
 		sourceColumn: job_via
 
@@ -53,7 +53,7 @@ table job_postings_fact
 
 	column job_schedule_type
 		dataType: string
-		lineageTag: ac07f036-c712-4496-b013-fefff608f674
+		lineageTag: 68dd4c70-8953-48c1-ae9e-2d7f825fa39f
 		summarizeBy: none
 		sourceColumn: job_schedule_type
 
@@ -62,7 +62,7 @@ table job_postings_fact
 	column job_work_from_home
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: 6708fb84-eac8-47e8-9743-07e93dc400e3
+		lineageTag: bceaf225-566f-450d-9eec-7478513905f3
 		summarizeBy: none
 		sourceColumn: job_work_from_home
 
@@ -70,7 +70,7 @@ table job_postings_fact
 
 	column search_location
 		dataType: string
-		lineageTag: f50579c9-cec4-4f6a-b4b5-91b92994289f
+		lineageTag: 97c7fd79-a482-4e59-8214-90af22a73c74
 		summarizeBy: none
 		sourceColumn: search_location
 
@@ -79,21 +79,21 @@ table job_postings_fact
 	column job_posted_date
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: ff6cab09-669b-47e3-ac22-e17f44a89d30
+		lineageTag: abb5da44-d64a-4eda-b9ca-6a4ac92e515b
 		summarizeBy: none
 		sourceColumn: job_posted_date
 
 		variation Variation
 			isDefault
-			relationship: 3ef51320-ef7c-4748-9958-fd5d45d7276f
-			defaultHierarchy: LocalDateTable_9126415f-c6a6-44c7-8959-1fc7280175ea.'Date Hierarchy'
+			relationship: c9a1a8a7-a515-4cb9-9770-45a653c9b871
+			defaultHierarchy: LocalDateTable_c718cf7f-2193-4e78-989f-1b0695a4fceb.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
 	column job_no_degree_mention
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: 73a9c226-df40-4fa0-9c1d-3bb4eafbcbec
+		lineageTag: 70192419-7fd3-4c59-8a9a-99af3e0cac65
 		summarizeBy: none
 		sourceColumn: job_no_degree_mention
 
@@ -102,7 +102,7 @@ table job_postings_fact
 	column job_health_insurance
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: 9d915ae6-0a90-4e92-8558-46d2e7140322
+		lineageTag: b6d81e35-a10b-4087-8355-da3bb7400591
 		summarizeBy: none
 		sourceColumn: job_health_insurance
 
@@ -110,7 +110,7 @@ table job_postings_fact
 
 	column job_country
 		dataType: string
-		lineageTag: ebe50bcb-3352-4646-8e6a-e7fc25b3a268
+		lineageTag: 3845b8aa-eda4-44b4-ae21-fc27465d9102
 		summarizeBy: none
 		sourceColumn: job_country
 
@@ -118,7 +118,7 @@ table job_postings_fact
 
 	column salary_rate
 		dataType: string
-		lineageTag: 9f29ae91-83e8-4a17-8561-e7da2097bafa
+		lineageTag: 403a63db-9c68-4269-be50-25a0dc81957f
 		summarizeBy: none
 		sourceColumn: salary_rate
 
@@ -127,7 +127,7 @@ table job_postings_fact
 	column salary_year_avg
 		dataType: int64
 		formatString: 0
-		lineageTag: 9dd6b22e-cb31-4be7-9589-d81310af08bd
+		lineageTag: fc5d2536-25d4-4fa3-b89a-46ee81dfbaed
 		summarizeBy: sum
 		sourceColumn: salary_year_avg
 
@@ -135,7 +135,7 @@ table job_postings_fact
 
 	column salary_hour_avg
 		dataType: double
-		lineageTag: 2495654d-71a1-4da7-a6b7-23c037dff5da
+		lineageTag: 129d7d9c-e047-4aef-8e55-33a2bb7583f1
 		summarizeBy: sum
 		sourceColumn: salary_hour_avg
 
@@ -143,17 +143,9 @@ table job_postings_fact
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column WeekDay
-		dataType: string
-		lineageTag: 27794eaa-b9e2-478f-8d84-1ad6e11b9532
-		summarizeBy: none
-		sourceColumn: WeekDay
-
-		annotation SummarizationSetBy = Automatic
-
 	column job_skills
 		dataType: string
-		lineageTag: 8451faf0-48bc-47fa-8142-2af0f9c4c183
+		lineageTag: c68347de-5e33-4203-b2db-5078e9aa046a
 		summarizeBy: none
 		sourceColumn: job_skills
 
@@ -161,27 +153,29 @@ table job_postings_fact
 
 	column job_type_skills
 		dataType: string
-		lineageTag: f56819ec-6528-4686-b2ae-0e8fbd6efdf6
+		lineageTag: a2fe317d-a85a-4e00-8dc7-873012fb54b0
 		summarizeBy: none
 		sourceColumn: job_type_skills
 
 		annotation SummarizationSetBy = Automatic
 
-	partition job_postings_fact = m
+	column WeekDay
+		dataType: string
+		lineageTag: b20e1527-48b5-4a41-a377-acd4497d2cc1
+		summarizeBy: none
+		sourceColumn: WeekDay
+
+		annotation SummarizationSetBy = Automatic
+
+	partition JobSkills = m
 		mode: import
 		source =
 				let
-				    Source = Excel.Workbook(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vQebF__tNxGfPbt8ieGqYGAh-5BR6rrLbkkYz4RJqwDDBK5Rnrl1UBMKqEPQlCTPuz3TTyrtQ_y2MHq/pub?output=xlsx"), null, true),
-				    job_postings_fact_Sheet = Source{[Item="job_postings_fact",Kind="Sheet"]}[Data],
-				    #"Promoted Headers" = Table.PromoteHeaders(job_postings_fact_Sheet, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"job_id", Int64.Type}, {"company_id", Int64.Type}, {"job_title_short", type text}, {"job_title", type text}, {"job_location", type text}, {"job_via", type text}, {"job_schedule_type", type text}, {"job_work_from_home", type logical}, {"search_location", type text}, {"job_posted_date", type datetime}, {"job_no_degree_mention", type logical}, {"job_health_insurance", type logical}, {"job_country", type text}, {"salary_rate", type text}, {"salary_year_avg", Int64.Type}, {"salary_hour_avg", type number}}),
-				    #"Added Custom" = Table.AddColumn(#"Changed Type", "WeekDay", each Date.MonthName([job_posted_date] )),
-				    #"Replaced Value" = Table.ReplaceValue(#"Added Custom","via ","",Replacer.ReplaceText,{"job_via"}),
-				    #"Trimmed Text" = Table.TransformColumns(#"Replaced Value",{{"job_via", Text.Trim, type text}})
+				    Source = job_postings_fact
 				in
-				    #"Trimmed Text"
-
-	annotation PBI_ResultType = Table
+				    Source
 
 	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
 

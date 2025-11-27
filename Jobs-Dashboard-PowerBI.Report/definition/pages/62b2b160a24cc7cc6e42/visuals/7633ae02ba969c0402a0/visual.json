@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "5d24fdaa93a0e2568707",
+  "name": "7633ae02ba969c0402a0",
   "position": {
     "x": 640,
-    "y": 40,
-    "z": 3000,
-    "height": 344,
+    "y": 48,
+    "z": 4001,
+    "height": 336,
     "width": 640,
-    "tabOrder": 1000
+    "tabOrder": 4001
   },
   "visual": {
-    "visualType": "areaChart",
+    "visualType": "donutChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "JobSchedule"
                     }
                   },
-                  "Property": "job_title"
+                  "Property": "ScheduleType"
                 }
               },
-              "queryRef": "Sheet1.job_title",
-              "nativeQueryRef": "Job Title",
-              "active": true,
-              "displayName": "Job Title"
+              "queryRef": "JobSchedule.ScheduleType",
+              "nativeQueryRef": "ScheduleType",
+              "active": true
             }
           ]
         },
@@ -42,18 +41,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "JobSchedule"
                         }
                       },
-                      "Property": "company_name"
+                      "Property": "company_id"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.company_name)",
-              "nativeQueryRef": "Company Posting",
-              "displayName": "Company Posting"
+              "queryRef": "CountNonNull(JobSchedule.company_id)",
+              "nativeQueryRef": "Count of company_id"
             }
           ]
         }
@@ -67,10 +65,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Sheet1"
+                        "Entity": "JobSchedule"
                       }
                     },
-                    "Property": "company_name"
+                    "Property": "company_id"
                   }
                 },
                 "Function": 5
@@ -89,21 +87,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Job Listings Per Role'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'Schedule Types'"
                 }
               }
             }
@@ -112,5 +96,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0afd3c9517bb643e02c0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "JobSchedule"
+              }
+            },
+            "Property": "ScheduleType"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "85f100a3d8dc8d2e1d43",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "JobSchedule"
+                  }
+                },
+                "Property": "company_id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

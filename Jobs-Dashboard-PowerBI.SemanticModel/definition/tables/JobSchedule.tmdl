@@ -1,0 +1,57 @@
+table JobSchedule
+	lineageTag: 52dcc97b-18a1-40c8-934c-7373c34092f5
+
+	column job_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0eb349f7-d0cc-45d2-bbe4-0278103f0de7
+		summarizeBy: none
+		sourceColumn: job_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f92fceb3-39be-4bc6-b419-272459476756
+		summarizeBy: none
+		sourceColumn: company_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScheduleType
+		dataType: string
+		lineageTag: ae34fe48-c85a-4ee7-bdb9-44a6bbebdefe
+		summarizeBy: none
+		sourceColumn: ScheduleType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition JobSchedule = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vQebF__tNxGfPbt8ieGqYGAh-5BR6rrLbkkYz4RJqwDDBK5Rnrl1UBMKqEPQlCTPuz3TTyrtQ_y2MHq/pub?output=xlsx"), null, true),
+				    job_postings_fact_Sheet = Source{[Item="job_postings_fact",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(job_postings_fact_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"job_id", Int64.Type}, {"company_id", Int64.Type}, {"job_title_short", type text}, {"job_title", type text}, {"job_location", type text}, {"job_via", type text}, {"job_schedule_type", type text}, {"job_work_from_home", type logical}, {"search_location", type text}, {"job_posted_date", type datetime}, {"job_no_degree_mention", type logical}, {"job_health_insurance", type logical}, {"job_country", type text}, {"salary_rate", type text}, {"salary_year_avg", Int64.Type}, {"salary_hour_avg", type number}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "WeekDay", each Date.MonthName([job_posted_date] )),
+				    #"Replaced Value" = Table.ReplaceValue(#"Added Custom","via ","",Replacer.ReplaceText,{"job_via"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Replaced Value",{{"job_via", Text.Trim, type text}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Trimmed Text",{"job_id", "job_schedule_type", "company_id"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Other Columns",{"job_id", "company_id", "job_schedule_type"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Reordered Columns",", and",",",Replacer.ReplaceText,{"job_schedule_type"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","and ",",",Replacer.ReplaceText,{"job_schedule_type"}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value2", "job_schedule_type", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"job_schedule_type.1", "job_schedule_type.2", "job_schedule_type.3"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"job_schedule_type.1", type text}, {"job_schedule_type.2", type text}, {"job_schedule_type.3", type text}}),
+				    #"Trimmed Text1" = Table.TransformColumns(#"Changed Type1",{{"job_schedule_type.1", Text.Trim, type text}, {"job_schedule_type.2", Text.Trim, type text}, {"job_schedule_type.3", Text.Trim, type text}}),
+				    #"Unpivoted Other Columns" = Table.UnpivotOtherColumns(#"Trimmed Text1", {"company_id", "job_id"}, "Attribute", "Value"),
+				    #"Removed Columns" = Table.RemoveColumns(#"Unpivoted Other Columns",{"Attribute"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"Value", "ScheduleType"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

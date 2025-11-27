@@ -8,57 +8,18 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e42567239d99ba712e40",
+        "name": "36c1559598e409dc1cc3",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "job_postings_fact"
               }
             },
             "Property": "job_via"
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "s",
-              "Entity": "Sheet1",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "s"
-                          }
-                        },
-                        "Property": "job_via"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'BeBee'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "Drillthrough"
       }
     ]
@@ -68,13 +29,15 @@
     "type": "Drillthrough",
     "parameters": [
       {
-        "name": "5eac713f0871940604b4",
-        "boundFilter": "e42567239d99ba712e40",
+        "name": "2d68cc5bc08600caae2a",
+        "boundFilter": "36c1559598e409dc1cc3",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "job_postings_fact"
               }
             },
             "Property": "job_via"

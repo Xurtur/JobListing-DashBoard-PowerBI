@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 344,
     "width": 640,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "columnChart",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "company_dim"
                     }
                   },
-                  "Property": "company_name"
+                  "Property": "name"
                 }
               },
-              "queryRef": "Sheet1.company_name",
+              "queryRef": "company_dim.name",
               "nativeQueryRef": "Company",
               "active": true,
               "displayName": "Company"
@@ -40,14 +40,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "job_postings_fact"
                     }
                   },
                   "Property": "job_title_short"
                 }
               },
-              "queryRef": "Sheet1.job_title_short",
-              "nativeQueryRef": "job_title_short"
+              "queryRef": "job_postings_fact.job_title_short",
+              "nativeQueryRef": "Job Position",
+              "displayName": "Job Position"
             }
           ]
         },
@@ -60,18 +61,18 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "job_postings_fact"
                         }
                       },
-                      "Property": "job_via"
+                      "Property": "job_title_short"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_via)",
-              "nativeQueryRef": "Job Posting",
-              "displayName": "Job Posting"
+              "queryRef": "CountNonNull(job_postings_fact.job_title_short)",
+              "nativeQueryRef": "Job Posting Count",
+              "displayName": "Job Posting Count"
             }
           ]
         }
@@ -85,10 +86,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Sheet1"
+                        "Entity": "job_postings_fact"
                       }
                     },
-                    "Property": "job_via"
+                    "Property": "job_title_short"
                   }
                 },
                 "Function": 5
@@ -176,15 +177,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e5c83158222768ea2e38",
+        "name": "99e4c5d07657bb15998d",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sheet1"
+                "Entity": "company_dim"
               }
             },
-            "Property": "company_name"
+            "Property": "name"
           }
         },
         "type": "TopN",
@@ -199,8 +200,13 @@
                     "Version": 2,
                     "From": [
                       {
-                        "Name": "s",
-                        "Entity": "Sheet1",
+                        "Name": "c",
+                        "Entity": "company_dim",
+                        "Type": 0
+                      },
+                      {
+                        "Name": "j",
+                        "Entity": "job_postings_fact",
                         "Type": 0
                       }
                     ],
@@ -209,10 +215,10 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "s"
+                              "Source": "c"
                             }
                           },
-                          "Property": "company_name"
+                          "Property": "name"
                         },
                         "Name": "field"
                       }
@@ -226,10 +232,10 @@
                               "Column": {
                                 "Expression": {
                                   "SourceRef": {
-                                    "Source": "s"
+                                    "Source": "j"
                                   }
                                 },
-                                "Property": "job_via"
+                                "Property": "job_title_short"
                               }
                             },
                             "Function": 5
@@ -244,8 +250,8 @@
               "Type": 2
             },
             {
-              "Name": "s",
-              "Entity": "Sheet1",
+              "Name": "c",
+              "Entity": "company_dim",
               "Type": 0
             }
           ],
@@ -258,10 +264,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "s"
+                            "Source": "c"
                           }
                         },
-                        "Property": "company_name"
+                        "Property": "name"
                       }
                     }
                   ],
@@ -275,6 +281,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "fc3fde6a1479d28b11b4",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "job_postings_fact"
+                  }
+                },
+                "Property": "job_title_short"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b34ffe0e0cae262d7506",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_title_short"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

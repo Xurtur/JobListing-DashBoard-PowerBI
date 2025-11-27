@@ -15,3 +15,30 @@ relationship AutoDetected_7e475f54-e8de-4927-8f46-fd6c52657193
 	fromColumn: job_postings_fact.company_id
 	toColumn: company_dim.company_id
 
+relationship AutoDetected_18cfb7e2-fa9c-4315-983d-f784a5cc70d8
+	fromColumn: JobSchedule.job_id
+	toColumn: job_postings_fact.job_id
+
+relationship b8551ece-9ecd-977b-3f6d-2498670cece8
+	toCardinality: many
+	fromColumn: JobSchedule.company_id
+	toColumn: job_postings_fact.company_id
+
+relationship c9a1a8a7-a515-4cb9-9770-45a653c9b871
+	joinOnDateBehavior: datePartOnly
+	fromColumn: JobSkills.job_posted_date
+	toColumn: LocalDateTable_c718cf7f-2193-4e78-989f-1b0695a4fceb.Date
+
+relationship AutoDetected_4a83f9ac-7611-4e2f-a1e2-ed4980b6fa02
+	fromColumn: skills_job_dim.job_id
+	toColumn: JobSkills.job_id
+
+relationship AutoDetected_51740079-f120-4963-8521-5d70e97bdda0
+	fromColumn: JobSchedule.job_id
+	toColumn: JobSkills.job_id
+
+relationship AutoDetected_af6b71a1-46d9-467a-b0d9-9e4924198def
+	isActive: false
+	fromColumn: JobSkills.company_id
+	toColumn: company_dim.company_id
+

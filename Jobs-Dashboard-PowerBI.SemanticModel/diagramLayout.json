@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 284,
-            "y": 88.875
+            "y": 133.3125
           },
           "nodeIndex": "job_postings_fact",
           "nodeLineageTag": "1440d18b-85d2-4b47-8955-8441e7052d5a",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 1382,
-            "y": 413
+            "y": 457.4375
           },
           "nodeIndex": "skills_dim",
           "nodeLineageTag": "23f530f2-57aa-4c66-8ad4-1f1b2de0d1c3",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 856,
-            "y": 520.625
+            "y": 565.0625
           },
           "nodeIndex": "skills_job_dim",
           "nodeLineageTag": "9c8fec1c-3505-4bc2-8735-32aa5314ab4c",
@@ -50,12 +50,38 @@
         {
           "location": {
             "x": 927,
-            "y": 191.3125
+            "y": 235.75
           },
           "nodeIndex": "company_dim",
           "nodeLineageTag": "df54598e-f290-4141-b0ba-8fb7392f01fe",
           "size": {
             "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1313,
+            "y": 0
+          },
+          "nodeIndex": "JobSchedule",
+          "nodeLineageTag": "52dcc97b-18a1-40c8-934c-7373c34092f5",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1382,
+            "y": 196.53125
+          },
+          "nodeIndex": "JobSkills",
+          "nodeLineageTag": "eb1aa5c2-aa76-4c87-abcd-3915767194c4",
+          "size": {
+            "height": 300,
             "width": 234
           },
           "zIndex": 0

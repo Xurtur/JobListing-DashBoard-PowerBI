@@ -3,11 +3,11 @@
   "name": "bdd4f9eda71a404ceab6",
   "position": {
     "x": 0,
-    "y": 75.475862068965512,
-    "z": 5000,
-    "height": 326.4,
-    "width": 640.22068965517235,
-    "tabOrder": 4000
+    "y": 75.78947368421052,
+    "z": 2500,
+    "height": 326.25563909774434,
+    "width": 640.24060150375931,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "columnChart",
@@ -207,6 +207,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "67ace78aa37991e0b536",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_title_short"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0e3d2652d85b624a0d0b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "job_postings_fact"
+                  }
+                },
+                "Property": "job_title_short"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
