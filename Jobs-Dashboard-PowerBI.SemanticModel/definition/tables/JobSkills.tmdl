@@ -1,169 +1,11 @@
 table JobSkills
 	lineageTag: eb1aa5c2-aa76-4c87-abcd-3915767194c4
 
-	column job_id
-		dataType: int64
-		formatString: 0
-		lineageTag: 7cdc558e-43eb-44eb-81d6-b3c0008ef41c
-		summarizeBy: none
-		sourceColumn: job_id
-
-		annotation SummarizationSetBy = Automatic
-
-	column company_id
-		dataType: int64
-		formatString: 0
-		lineageTag: eb7de328-d1cf-4ba5-a146-25e83515be4f
-		summarizeBy: sum
-		sourceColumn: company_id
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_title_short
+	column Value
 		dataType: string
-		lineageTag: 7d85a808-e45d-4240-8e2d-834bf25a92af
+		lineageTag: 20058160-56f7-44b1-8eb0-0ecef963001f
 		summarizeBy: none
-		sourceColumn: job_title_short
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_title
-		dataType: string
-		lineageTag: db690936-b421-47b4-8689-5671bdd0f3b8
-		summarizeBy: none
-		sourceColumn: job_title
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_location
-		dataType: string
-		lineageTag: 4d1e7213-99c7-4d90-8463-a9adefc99519
-		summarizeBy: none
-		sourceColumn: job_location
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_via
-		dataType: string
-		lineageTag: 1119aee3-f1ff-4c51-a03a-2544e365db57
-		summarizeBy: none
-		sourceColumn: job_via
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_schedule_type
-		dataType: string
-		lineageTag: 68dd4c70-8953-48c1-ae9e-2d7f825fa39f
-		summarizeBy: none
-		sourceColumn: job_schedule_type
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_work_from_home
-		dataType: boolean
-		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: bceaf225-566f-450d-9eec-7478513905f3
-		summarizeBy: none
-		sourceColumn: job_work_from_home
-
-		annotation SummarizationSetBy = Automatic
-
-	column search_location
-		dataType: string
-		lineageTag: 97c7fd79-a482-4e59-8214-90af22a73c74
-		summarizeBy: none
-		sourceColumn: search_location
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_posted_date
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: abb5da44-d64a-4eda-b9ca-6a4ac92e515b
-		summarizeBy: none
-		sourceColumn: job_posted_date
-
-		variation Variation
-			isDefault
-			relationship: c9a1a8a7-a515-4cb9-9770-45a653c9b871
-			defaultHierarchy: LocalDateTable_c718cf7f-2193-4e78-989f-1b0695a4fceb.'Date Hierarchy'
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_no_degree_mention
-		dataType: boolean
-		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: 70192419-7fd3-4c59-8a9a-99af3e0cac65
-		summarizeBy: none
-		sourceColumn: job_no_degree_mention
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_health_insurance
-		dataType: boolean
-		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: b6d81e35-a10b-4087-8355-da3bb7400591
-		summarizeBy: none
-		sourceColumn: job_health_insurance
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_country
-		dataType: string
-		lineageTag: 3845b8aa-eda4-44b4-ae21-fc27465d9102
-		summarizeBy: none
-		sourceColumn: job_country
-
-		annotation SummarizationSetBy = Automatic
-
-	column salary_rate
-		dataType: string
-		lineageTag: 403a63db-9c68-4269-be50-25a0dc81957f
-		summarizeBy: none
-		sourceColumn: salary_rate
-
-		annotation SummarizationSetBy = Automatic
-
-	column salary_year_avg
-		dataType: int64
-		formatString: 0
-		lineageTag: fc5d2536-25d4-4fa3-b89a-46ee81dfbaed
-		summarizeBy: sum
-		sourceColumn: salary_year_avg
-
-		annotation SummarizationSetBy = Automatic
-
-	column salary_hour_avg
-		dataType: double
-		lineageTag: 129d7d9c-e047-4aef-8e55-33a2bb7583f1
-		summarizeBy: sum
-		sourceColumn: salary_hour_avg
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column job_skills
-		dataType: string
-		lineageTag: c68347de-5e33-4203-b2db-5078e9aa046a
-		summarizeBy: none
-		sourceColumn: job_skills
-
-		annotation SummarizationSetBy = Automatic
-
-	column job_type_skills
-		dataType: string
-		lineageTag: a2fe317d-a85a-4e00-8dc7-873012fb54b0
-		summarizeBy: none
-		sourceColumn: job_type_skills
-
-		annotation SummarizationSetBy = Automatic
-
-	column WeekDay
-		dataType: string
-		lineageTag: b20e1527-48b5-4a41-a377-acd4497d2cc1
-		summarizeBy: none
-		sourceColumn: WeekDay
+		sourceColumn: Value
 
 		annotation SummarizationSetBy = Automatic
 
@@ -171,9 +13,19 @@ table JobSkills
 		mode: import
 		source =
 				let
-				    Source = job_postings_fact
+				    Source = job_postings_fact,
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"job_title_short", "job_title", "job_location", "job_via", "job_schedule_type", "job_work_from_home", "search_location", "job_posted_date", "job_no_degree_mention", "job_health_insurance", "job_country", "salary_rate", "salary_year_avg", "salary_hour_avg", "WeekDay"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Removed Columns","[","",Replacer.ReplaceText,{"job_skills"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","]","",Replacer.ReplaceText,{"job_skills"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","'","",Replacer.ReplaceText,{"job_skills"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Replaced Value2",{{"job_skills", Text.Trim, type text}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Trimmed Text", "job_skills", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"job_skills.1", "job_skills.2", "job_skills.3", "job_skills.4", "job_skills.5", "job_skills.6", "job_skills.7", "job_skills.8", "job_skills.9", "job_skills.10", "job_skills.11", "job_skills.12", "job_skills.13", "job_skills.14", "job_skills.15", "job_skills.16"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"job_skills.1", type text}, {"job_skills.2", type text}, {"job_skills.3", type text}, {"job_skills.4", type text}, {"job_skills.5", type text}, {"job_skills.6", type text}, {"job_skills.7", type text}, {"job_skills.8", type text}, {"job_skills.9", type text}, {"job_skills.10", type text}, {"job_skills.11", type text}, {"job_skills.12", type text}, {"job_skills.13", type text}, {"job_skills.14", type text}, {"job_skills.15", type text}, {"job_skills.16", type text}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type",{"job_type_skills"}),
+				    #"Unpivoted Other Columns" = Table.UnpivotOtherColumns(#"Removed Columns1", {"job_id", "company_id"}, "Attribute", "Value"),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Unpivoted Other Columns",{"Attribute", "job_id", "company_id"})
 				in
-				    Source
+				    #"Removed Columns2"
 
 	annotation PBI_NavigationStepName = Navigation
 

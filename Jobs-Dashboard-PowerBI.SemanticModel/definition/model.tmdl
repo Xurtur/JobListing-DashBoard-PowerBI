@@ -20,7 +20,6 @@ ref table skills_job_dim
 ref table company_dim
 ref table JobSchedule
 ref table JobSkills
-ref table LocalDateTable_c718cf7f-2193-4e78-989f-1b0695a4fceb
 
 ref cultureInfo en-US
 

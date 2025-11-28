@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 13.4375
       },
       "nodes": [
         {
           "location": {
-            "x": 284,
-            "y": 133.3125
+            "x": 569,
+            "y": 245.3125
           },
           "nodeIndex": "job_postings_fact",
           "nodeLineageTag": "1440d18b-85d2-4b47-8955-8441e7052d5a",
@@ -19,12 +19,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 1382,
-            "y": 457.4375
+            "x": 851,
+            "y": 880.4375
           },
           "nodeIndex": "skills_dim",
           "nodeLineageTag": "23f530f2-57aa-4c66-8ad4-1f1b2de0d1c3",
@@ -32,12 +32,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 856,
-            "y": 565.0625
+            "x": 581,
+            "y": 729.0625
           },
           "nodeIndex": "skills_job_dim",
           "nodeLineageTag": "9c8fec1c-3505-4bc2-8735-32aa5314ab4c",
@@ -45,12 +45,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 927,
-            "y": 235.75
+            "x": 1040,
+            "y": 336.75
           },
           "nodeIndex": "company_dim",
           "nodeLineageTag": "df54598e-f290-4141-b0ba-8fb7392f01fe",
@@ -58,11 +58,11 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 1313,
+            "x": 1341,
             "y": 0
           },
           "nodeIndex": "JobSchedule",
@@ -71,12 +71,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 1382,
-            "y": 196.53125
+            "x": 1436,
+            "y": 382.53125
           },
           "nodeIndex": "JobSkills",
           "nodeLineageTag": "eb1aa5c2-aa76-4c87-abcd-3915767194c4",
@@ -84,7 +84,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
         }
       ],
       "name": "All tables",
