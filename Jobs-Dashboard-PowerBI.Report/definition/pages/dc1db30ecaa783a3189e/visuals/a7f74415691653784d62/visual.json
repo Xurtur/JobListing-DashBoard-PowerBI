@@ -4,10 +4,10 @@
   "position": {
     "x": 640,
     "y": 376,
-    "z": 4000,
+    "z": 3000,
     "height": 344,
     "width": 640,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pieChart",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sheet1"
+                      "Entity": "job_postings_fact"
                     }
                   },
                   "Property": "job_no_degree_mention"
                 }
               },
-              "queryRef": "Sheet1.job_no_degree_mention",
-              "nativeQueryRef": "Jobs",
-              "active": true,
-              "displayName": "Jobs"
+              "queryRef": "job_postings_fact.job_no_degree_mention",
+              "nativeQueryRef": "job_no_degree_mention",
+              "active": true
             }
           ]
         },
@@ -42,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sheet1"
+                          "Entity": "job_postings_fact"
                         }
                       },
                       "Property": "job_no_degree_mention"
@@ -51,7 +50,7 @@
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Sheet1.job_no_degree_mention)",
+              "queryRef": "CountNonNull(job_postings_fact.job_no_degree_mention)",
               "nativeQueryRef": "Count of job_no_degree_mention"
             }
           ]
@@ -66,7 +65,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Sheet1"
+                        "Entity": "job_postings_fact"
                       }
                     },
                     "Property": "job_no_degree_mention"
@@ -111,5 +110,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "59b3297f3e5a0b00291a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "job_postings_fact"
+                  }
+                },
+                "Property": "job_no_degree_mention"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f633f7350a492287094e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_no_degree_mention"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

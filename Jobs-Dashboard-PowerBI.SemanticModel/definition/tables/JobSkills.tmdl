@@ -9,6 +9,24 @@ table JobSkills
 
 		annotation SummarizationSetBy = Automatic
 
+	column job_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a12a7583-a8b7-4042-b3a9-eb983a669dfa
+		summarizeBy: none
+		sourceColumn: job_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 21eccebc-fe66-469d-8520-264e2aff7324
+		summarizeBy: sum
+		sourceColumn: company_id
+
+		annotation SummarizationSetBy = Automatic
+
 	partition JobSkills = m
 		mode: import
 		source =
@@ -23,7 +41,7 @@ table JobSkills
 				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"job_skills.1", type text}, {"job_skills.2", type text}, {"job_skills.3", type text}, {"job_skills.4", type text}, {"job_skills.5", type text}, {"job_skills.6", type text}, {"job_skills.7", type text}, {"job_skills.8", type text}, {"job_skills.9", type text}, {"job_skills.10", type text}, {"job_skills.11", type text}, {"job_skills.12", type text}, {"job_skills.13", type text}, {"job_skills.14", type text}, {"job_skills.15", type text}, {"job_skills.16", type text}}),
 				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type",{"job_type_skills"}),
 				    #"Unpivoted Other Columns" = Table.UnpivotOtherColumns(#"Removed Columns1", {"job_id", "company_id"}, "Attribute", "Value"),
-				    #"Removed Columns2" = Table.RemoveColumns(#"Unpivoted Other Columns",{"Attribute", "job_id", "company_id"})
+				    #"Removed Columns2" = Table.RemoveColumns(#"Unpivoted Other Columns",{"Attribute"})
 				in
 				    #"Removed Columns2"
 

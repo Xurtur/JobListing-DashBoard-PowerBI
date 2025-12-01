@@ -3682,19 +3682,7 @@ cultureInfo en-US
 			          "ConceptualProperty": "job_health_insurance"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Jobs With Health Insurance": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    },
 			    "sheet1.job_no_degree_mention": {
 			      "Definition": {

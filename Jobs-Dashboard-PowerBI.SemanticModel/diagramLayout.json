@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 13.4375
+        "y": 0
       },
       "nodes": [
         {
@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 851,
-            "y": 880.4375
+            "x": 1095,
+            "y": 837
           },
           "nodeIndex": "skills_dim",
           "nodeLineageTag": "23f530f2-57aa-4c66-8ad4-1f1b2de0d1c3",
@@ -75,8 +75,8 @@
         },
         {
           "location": {
-            "x": 1436,
-            "y": 382.53125
+            "x": 1483,
+            "y": 363.53125
           },
           "nodeIndex": "JobSkills",
           "nodeLineageTag": "eb1aa5c2-aa76-4c87-abcd-3915767194c4",

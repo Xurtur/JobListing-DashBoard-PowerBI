@@ -31,8 +31,6 @@
       {
         "name": "2d68cc5bc08600caae2a",
         "boundFilter": "36c1559598e409dc1cc3",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {

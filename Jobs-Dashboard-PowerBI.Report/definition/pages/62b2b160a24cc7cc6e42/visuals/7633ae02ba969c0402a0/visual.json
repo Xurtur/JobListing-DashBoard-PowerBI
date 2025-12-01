@@ -4,10 +4,10 @@
   "position": {
     "x": 640,
     "y": 48,
-    "z": 4001,
+    "z": 2000,
     "height": 336,
     "width": 640,
-    "tabOrder": 4001
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "donutChart",
@@ -96,42 +96,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0afd3c9517bb643e02c0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "JobSchedule"
-              }
-            },
-            "Property": "ScheduleType"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "85f100a3d8dc8d2e1d43",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "JobSchedule"
-                  }
-                },
-                "Property": "company_id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

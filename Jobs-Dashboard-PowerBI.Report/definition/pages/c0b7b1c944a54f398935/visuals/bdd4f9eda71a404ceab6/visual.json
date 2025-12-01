@@ -7,7 +7,7 @@
     "z": 2500,
     "height": 326.25563909774434,
     "width": 640.24060150375931,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "columnChart",
@@ -207,39 +207,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "67ace78aa37991e0b536",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "job_postings_fact"
-              }
-            },
-            "Property": "job_title_short"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0e3d2652d85b624a0d0b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "job_postings_fact"
-                  }
-                },
-                "Property": "job_title_short"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }
