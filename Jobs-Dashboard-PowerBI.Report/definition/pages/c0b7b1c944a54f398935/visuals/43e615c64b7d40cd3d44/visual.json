@@ -7,7 +7,7 @@
     "z": 0,
     "height": 318.45517241379309,
     "width": 640.22068965517235,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "treemap",
@@ -116,6 +116,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Average Yearly Wage By Role'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

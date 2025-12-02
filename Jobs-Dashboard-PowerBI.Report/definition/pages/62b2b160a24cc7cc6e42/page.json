@@ -83,5 +83,27 @@
       }
     ],
     "referenceScope": "CrossReport"
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "7633ae02ba969c0402a0",
+      "target": "298537a0d12604280260",
+      "type": "DataFilter"
+    },
+    {
+      "source": "7633ae02ba969c0402a0",
+      "target": "8455df38da860e4344e6",
+      "type": "DataFilter"
+    },
+    {
+      "source": "298537a0d12604280260",
+      "target": "7633ae02ba969c0402a0",
+      "type": "DataFilter"
+    },
+    {
+      "source": "298537a0d12604280260",
+      "target": "8455df38da860e4344e6",
+      "type": "DataFilter"
+    }
+  ]
 }

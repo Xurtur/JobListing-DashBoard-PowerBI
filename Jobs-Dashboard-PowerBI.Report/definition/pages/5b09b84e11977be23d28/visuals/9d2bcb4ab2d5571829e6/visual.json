@@ -1,58 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "df6dd3c32c97e3b67ac2",
+  "name": "9d2bcb4ab2d5571829e6",
   "position": {
     "x": 0,
-    "y": 40,
-    "z": 4000,
-    "height": 336,
+    "y": 448.66666666666669,
+    "z": 3000,
+    "height": 271.33333333333331,
     "width": 640,
-    "tabOrder": 2000
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "card",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "job_postings_fact"
-                    }
-                  },
-                  "Property": "job_title_short"
-                }
-              },
-              "queryRef": "job_postings_fact.job_title_short",
-              "nativeQueryRef": "Job Title",
-              "active": true,
-              "displayName": "Job Title"
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "job_postings_fact"
-                    }
-                  },
-                  "Property": "job_title_short"
-                }
-              },
-              "queryRef": "job_postings_fact.job_title_short",
-              "nativeQueryRef": "Job Title",
-              "displayName": "Job Title"
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -64,15 +25,15 @@
                           "Entity": "job_postings_fact"
                         }
                       },
-                      "Property": "job_title_short"
+                      "Property": "job_country"
                     }
                   },
-                  "Function": 5
+                  "Function": 3
                 }
               },
-              "queryRef": "CountNonNull(job_postings_fact.job_title_short)",
-              "nativeQueryRef": "Number of Postings",
-              "displayName": "Number of Postings"
+              "queryRef": "Min(job_postings_fact.job_country)",
+              "nativeQueryRef": "First job_country",
+              "displayName": "Top Country"
             }
           ]
         }
@@ -89,10 +50,10 @@
                         "Entity": "job_postings_fact"
                       }
                     },
-                    "Property": "job_title_short"
+                    "Property": "job_country"
                   }
                 },
-                "Function": 5
+                "Function": 2
               }
             },
             "direction": "Descending"
@@ -101,64 +62,12 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "legend": [
-        {
-          "properties": {
-            "showGradientLegend": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Top 10 Roles in Website'"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "13bd4ab4e8965454c2c5",
-        "ordinal": 0,
+        "name": "83813140e73bac1183da",
         "field": {
           "Column": {
             "Expression": {
@@ -166,7 +75,7 @@
                 "Entity": "job_postings_fact"
               }
             },
-            "Property": "job_title_short"
+            "Property": "job_country"
           }
         },
         "type": "TopN",
@@ -194,7 +103,7 @@
                               "Source": "j"
                             }
                           },
-                          "Property": "job_title_short"
+                          "Property": "job_country"
                         },
                         "Name": "field"
                       }
@@ -211,7 +120,7 @@
                                     "Source": "j"
                                   }
                                 },
-                                "Property": "job_title_short"
+                                "Property": "job_country"
                               }
                             },
                             "Function": 5
@@ -219,7 +128,7 @@
                         }
                       }
                     ],
-                    "Top": 10
+                    "Top": 1
                   }
                 }
               },
@@ -243,7 +152,7 @@
                             "Source": "j"
                           }
                         },
-                        "Property": "job_title_short"
+                        "Property": "job_country"
                       }
                     }
                   ],
@@ -256,11 +165,56 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       },
       {
-        "name": "db4af7d4be82ea6884e1",
-        "ordinal": 1,
+        "name": "9c5dbf410722121215aa",
+        "field": {
+          "Arithmetic": {
+            "Left": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "job_postings_fact"
+                      }
+                    },
+                    "Property": "job_country"
+                  }
+                },
+                "Function": 2
+              }
+            },
+            "Right": {
+              "ScopedEval": {
+                "Expression": {
+                  "Aggregation": {
+                    "Expression": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "job_postings_fact"
+                          }
+                        },
+                        "Property": "job_country"
+                      }
+                    },
+                    "Function": 2
+                  }
+                },
+                "Scope": []
+              }
+            },
+            "Operator": 3
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "10838d3f1b29ebe892a6",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -270,15 +224,14 @@
                     "Entity": "job_postings_fact"
                   }
                 },
-                "Property": "job_title_short"
+                "Property": "job_country"
               }
             },
-            "Function": 5
+            "Function": 3
           }
         },
         "type": "Advanced"
       }
-    ],
-    "filterSortOrder": "Custom"
+    ]
   }
 }

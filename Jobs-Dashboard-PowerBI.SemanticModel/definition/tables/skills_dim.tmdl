@@ -33,9 +33,10 @@ table skills_dim
 				    Source = Excel.Workbook(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vTZZTPUVirze5hFutFMLpB1Jho6tg8-EAUFzI-W2jdx_LlscULzFtxEXRQ-VldPHCF0b2sDrCnjpQrU/pub?output=xlsx"), null, true),
 				    skills_dim_Sheet = Source{[Item="skills_dim",Kind="Sheet"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(skills_dim_Sheet, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"skill_id", Int64.Type}, {"skills", type text}, {"type", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"skill_id", Int64.Type}, {"skills", type text}, {"type", type text}}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Changed Type",{{"skills", Text.Trim, type text}, {"type", Text.Trim, type text}})
 				in
-				    #"Changed Type"
+				    #"Trimmed Text"
 
 	annotation PBI_ResultType = Table
 

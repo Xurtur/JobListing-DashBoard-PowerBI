@@ -1,37 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "7633ae02ba969c0402a0",
+  "name": "2e2870225194a1c4b198",
   "position": {
     "x": 640,
-    "y": 48,
-    "z": 2000,
-    "height": 336,
-    "width": 640
+    "y": 448.66666666666669,
+    "z": 4000,
+    "height": 271.33333333333331,
+    "width": 640,
+    "tabOrder": 4000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "treemap",
     "query": {
       "queryState": {
-        "Category": {
+        "Group": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "JobSchedule"
+                      "Entity": "skills_dim"
                     }
                   },
-                  "Property": "ScheduleType"
+                  "Property": "type"
                 }
               },
-              "queryRef": "JobSchedule.ScheduleType",
-              "nativeQueryRef": "ScheduleType",
+              "queryRef": "skills_dim.type",
+              "nativeQueryRef": "type1",
               "active": true
             }
           ]
         },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -40,43 +41,20 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "JobSchedule"
+                          "Entity": "skills_dim"
                         }
                       },
-                      "Property": "company_id"
+                      "Property": "type"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(JobSchedule.company_id)",
-              "nativeQueryRef": "Count of company_id"
+              "queryRef": "CountNonNull(skills_dim.type)",
+              "nativeQueryRef": "type"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "JobSchedule"
-                      }
-                    },
-                    "Property": "company_id"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {
@@ -86,7 +64,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Schedule Types'"
+                  "Value": "'Popular Fields'"
                 }
               }
             },
@@ -113,37 +91,37 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fb09944052293e281610",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "JobSchedule"
-              }
-            },
-            "Property": "ScheduleType"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e71cb546adbda4158d94",
+        "name": "21b395830989b9c3b1ea",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "JobSchedule"
+                    "Entity": "skills_dim"
                   }
                 },
-                "Property": "company_id"
+                "Property": "type"
               }
             },
             "Function": 5
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "4e9bf9710d901b19bd6e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "skills_dim"
+              }
+            },
+            "Property": "type"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

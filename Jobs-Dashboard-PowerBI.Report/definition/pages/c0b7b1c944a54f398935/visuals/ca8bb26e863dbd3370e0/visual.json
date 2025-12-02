@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 75.475862068965512,
     "width": 519.72413793103442,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "textbox",
@@ -26,7 +26,8 @@
                       "fontSize": "36pt"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "center"
               }
             ]
           }

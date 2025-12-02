@@ -7,7 +7,7 @@
     "z": 2500,
     "height": 326.25563909774434,
     "width": 640.24060150375931,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "columnChart",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "company_dim.name",
-              "nativeQueryRef": "name",
-              "active": true
+              "nativeQueryRef": "Company",
+              "active": true,
+              "displayName": "Company"
             }
           ]
         },
@@ -69,7 +70,8 @@
                 }
               },
               "queryRef": "CountNonNull(job_postings_fact.job_title_short)",
-              "nativeQueryRef": "Count of job_title_short"
+              "nativeQueryRef": "Postings",
+              "displayName": "Postings"
             }
           ]
         }
@@ -97,6 +99,71 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 10 Company Poster'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
@@ -207,6 +274,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "a7695f67c3ea20284900",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_title_short"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f432f39996b67c9bcc4c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "job_postings_fact"
+                  }
+                },
+                "Property": "job_title_short"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

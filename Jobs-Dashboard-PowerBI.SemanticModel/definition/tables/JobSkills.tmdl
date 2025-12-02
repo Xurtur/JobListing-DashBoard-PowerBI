@@ -41,9 +41,10 @@ table JobSkills
 				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"job_skills.1", type text}, {"job_skills.2", type text}, {"job_skills.3", type text}, {"job_skills.4", type text}, {"job_skills.5", type text}, {"job_skills.6", type text}, {"job_skills.7", type text}, {"job_skills.8", type text}, {"job_skills.9", type text}, {"job_skills.10", type text}, {"job_skills.11", type text}, {"job_skills.12", type text}, {"job_skills.13", type text}, {"job_skills.14", type text}, {"job_skills.15", type text}, {"job_skills.16", type text}}),
 				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type",{"job_type_skills"}),
 				    #"Unpivoted Other Columns" = Table.UnpivotOtherColumns(#"Removed Columns1", {"job_id", "company_id"}, "Attribute", "Value"),
-				    #"Removed Columns2" = Table.RemoveColumns(#"Unpivoted Other Columns",{"Attribute"})
+				    #"Removed Columns2" = Table.RemoveColumns(#"Unpivoted Other Columns",{"Attribute"}),
+				    #"Trimmed Text1" = Table.TransformColumns(#"Removed Columns2",{{"Value", Text.Trim, type text}})
 				in
-				    #"Removed Columns2"
+				    #"Trimmed Text1"
 
 	annotation PBI_NavigationStepName = Navigation
 

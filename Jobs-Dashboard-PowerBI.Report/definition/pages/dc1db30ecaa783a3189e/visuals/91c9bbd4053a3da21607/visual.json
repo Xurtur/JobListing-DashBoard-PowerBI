@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 344,
     "width": 640,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "donutChart",
@@ -273,7 +273,21 @@
         }
       },
       {
-        "name": "f5fbcc94cb77ac37923b",
+        "name": "3bdc120e061390800720",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_health_insurance"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b2e34f5482177ab14e4e",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -290,20 +304,6 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "e2924602c405195850c0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "job_postings_fact"
-              }
-            },
-            "Property": "job_health_insurance"
-          }
-        },
-        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

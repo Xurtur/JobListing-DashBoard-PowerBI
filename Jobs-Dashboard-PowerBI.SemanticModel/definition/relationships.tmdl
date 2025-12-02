@@ -8,6 +8,7 @@ relationship AutoDetected_da1e396b-f61b-41f1-b64e-56c07eca676c
 	toColumn: job_postings_fact.job_id
 
 relationship AutoDetected_461f71b1-d081-4a1f-b517-63019e0fbdda
+	crossFilteringBehavior: bothDirections
 	fromColumn: skills_job_dim.skill_id
 	toColumn: skills_dim.skill_id
 
@@ -24,12 +25,9 @@ relationship b8551ece-9ecd-977b-3f6d-2498670cece8
 	fromColumn: JobSchedule.company_id
 	toColumn: job_postings_fact.company_id
 
-relationship AutoDetected_e23df373-909a-4a01-a7b8-cf6103c9c5a7
-	fromColumn: JobSkills.job_id
-	toColumn: job_postings_fact.job_id
-
-relationship AutoDetected_e96a7995-716f-4a25-9f6f-e88a9efcf2df
-	isActive: false
-	fromColumn: JobSkills.company_id
-	toColumn: company_dim.company_id
+relationship c9194185-0992-4327-59c9-1de9b83bfa14
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: skills_job_dim.job_id
+	toColumn: JobSkills.job_id
 

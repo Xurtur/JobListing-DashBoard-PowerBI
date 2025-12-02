@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 326.4,
     "width": 639.55862068965519,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pieChart",
@@ -103,6 +103,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'Top 10 Websites For Job Listing'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

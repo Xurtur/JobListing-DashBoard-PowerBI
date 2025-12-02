@@ -6,7 +6,8 @@
     "y": 32,
     "z": 2000,
     "height": 344,
-    "width": 640
+    "width": 640,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "columnChart",
@@ -280,6 +281,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "dcb2bc52003d05b90080",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_title_short"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "870e3fb88a4d07c15868",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "job_postings_fact"
+                  }
+                },
+                "Property": "job_title_short"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

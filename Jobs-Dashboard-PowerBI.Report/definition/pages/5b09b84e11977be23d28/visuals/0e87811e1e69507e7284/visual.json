@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "df6dd3c32c97e3b67ac2",
+  "name": "0e87811e1e69507e7284",
   "position": {
     "x": 0,
-    "y": 40,
-    "z": 4000,
-    "height": 336,
-    "width": 640,
-    "tabOrder": 2000
+    "y": 90.703448275862058,
+    "z": 0,
+    "height": 358.17931034482757,
+    "width": 640.22068965517235,
+    "tabOrder": 1000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,16 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "job_postings_fact"
+                      "Entity": "JobSkills"
                     }
                   },
-                  "Property": "job_title_short"
+                  "Property": "Value"
                 }
               },
-              "queryRef": "job_postings_fact.job_title_short",
-              "nativeQueryRef": "Job Title",
+              "queryRef": "JobSkills.Value",
+              "nativeQueryRef": "Skills",
               "active": true,
-              "displayName": "Job Title"
+              "displayName": "Skills"
             }
           ]
         },
@@ -40,15 +40,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "job_postings_fact"
+                      "Entity": "skills_dim"
                     }
                   },
-                  "Property": "job_title_short"
+                  "Property": "type"
                 }
               },
-              "queryRef": "job_postings_fact.job_title_short",
-              "nativeQueryRef": "Job Title",
-              "displayName": "Job Title"
+              "queryRef": "skills_dim.type",
+              "nativeQueryRef": "type"
             }
           ]
         },
@@ -61,18 +60,18 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "job_postings_fact"
+                          "Entity": "JobSkills"
                         }
                       },
-                      "Property": "job_title_short"
+                      "Property": "company_id"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(job_postings_fact.job_title_short)",
-              "nativeQueryRef": "Number of Postings",
-              "displayName": "Number of Postings"
+              "queryRef": "CountNonNull(JobSkills.company_id)",
+              "nativeQueryRef": "Skill Count",
+              "displayName": "Skill Count"
             }
           ]
         }
@@ -86,10 +85,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "job_postings_fact"
+                        "Entity": "JobSkills"
                       }
                     },
-                    "Property": "job_title_short"
+                    "Property": "company_id"
                   }
                 },
                 "Function": 5
@@ -127,6 +126,13 @@
       "title": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 10 Skills'"
+                }
+              }
+            },
             "alignment": {
               "expr": {
                 "Literal": {
@@ -141,10 +147,10 @@
                 }
               }
             },
-            "text": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 10 Roles in Website'"
+                  "Value": "true"
                 }
               }
             }
@@ -157,16 +163,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "13bd4ab4e8965454c2c5",
-        "ordinal": 0,
+        "name": "8bdce763313068706779",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "job_postings_fact"
+                "Entity": "JobSkills"
               }
             },
-            "Property": "job_title_short"
+            "Property": "Value"
           }
         },
         "type": "TopN",
@@ -182,7 +187,7 @@
                     "From": [
                       {
                         "Name": "j",
-                        "Entity": "job_postings_fact",
+                        "Entity": "JobSkills",
                         "Type": 0
                       }
                     ],
@@ -194,7 +199,7 @@
                               "Source": "j"
                             }
                           },
-                          "Property": "job_title_short"
+                          "Property": "Value"
                         },
                         "Name": "field"
                       }
@@ -211,7 +216,7 @@
                                     "Source": "j"
                                   }
                                 },
-                                "Property": "job_title_short"
+                                "Property": "company_id"
                               }
                             },
                             "Function": 5
@@ -227,7 +232,7 @@
             },
             {
               "Name": "j",
-              "Entity": "job_postings_fact",
+              "Entity": "JobSkills",
               "Type": 0
             }
           ],
@@ -243,7 +248,7 @@
                             "Source": "j"
                           }
                         },
-                        "Property": "job_title_short"
+                        "Property": "Value"
                       }
                     }
                   ],
@@ -259,26 +264,38 @@
         }
       },
       {
-        "name": "db4af7d4be82ea6884e1",
-        "ordinal": 1,
+        "name": "b62566a670cd308d64ca",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "job_postings_fact"
+                    "Entity": "JobSkills"
                   }
                 },
-                "Property": "job_title_short"
+                "Property": "company_id"
               }
             },
             "Function": 5
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "ab6f430cee2000371c30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "skills_dim"
+              }
+            },
+            "Property": "type"
+          }
+        },
+        "type": "Categorical"
       }
-    ],
-    "filterSortOrder": "Custom"
+    ]
   }
 }

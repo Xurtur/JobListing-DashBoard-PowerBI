@@ -7,7 +7,7 @@
     "z": 2750,
     "height": 318.45517241379309,
     "width": 639.55862068965519,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "areaChart",
@@ -91,6 +91,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Job Postings By Month'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

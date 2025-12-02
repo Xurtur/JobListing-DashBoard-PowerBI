@@ -20,6 +20,45 @@
           }
         },
         "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "j",
+              "Entity": "job_postings_fact",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "j"
+                          }
+                        },
+                        "Property": "job_via"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'LinkedIn'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "Drillthrough"
       }
     ]
@@ -44,5 +83,67 @@
       }
     ],
     "referenceScope": "CrossReport"
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "df6dd3c32c97e3b67ac2",
+      "target": "91c9bbd4053a3da21607",
+      "type": "DataFilter"
+    },
+    {
+      "source": "df6dd3c32c97e3b67ac2",
+      "target": "a7f74415691653784d62",
+      "type": "DataFilter"
+    },
+    {
+      "source": "df6dd3c32c97e3b67ac2",
+      "target": "e9709533eac0951c5300",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e9709533eac0951c5300",
+      "target": "91c9bbd4053a3da21607",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e9709533eac0951c5300",
+      "target": "a7f74415691653784d62",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e9709533eac0951c5300",
+      "target": "df6dd3c32c97e3b67ac2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a7f74415691653784d62",
+      "target": "91c9bbd4053a3da21607",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a7f74415691653784d62",
+      "target": "df6dd3c32c97e3b67ac2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a7f74415691653784d62",
+      "target": "e9709533eac0951c5300",
+      "type": "DataFilter"
+    },
+    {
+      "source": "91c9bbd4053a3da21607",
+      "target": "a7f74415691653784d62",
+      "type": "DataFilter"
+    },
+    {
+      "source": "91c9bbd4053a3da21607",
+      "target": "e9709533eac0951c5300",
+      "type": "DataFilter"
+    },
+    {
+      "source": "91c9bbd4053a3da21607",
+      "target": "df6dd3c32c97e3b67ac2",
+      "type": "DataFilter"
+    }
+  ]
 }

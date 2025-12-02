@@ -6,8 +6,7 @@
     "y": 376,
     "z": 3000,
     "height": 344,
-    "width": 640,
-    "tabOrder": 1000
+    "width": 640
   },
   "visual": {
     "visualType": "pieChart",
@@ -80,6 +79,21 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -114,7 +128,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "59b3297f3e5a0b00291a",
+        "name": "e46b763bece215b7e49b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "job_postings_fact"
+              }
+            },
+            "Property": "job_no_degree_mention"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d3d444177eb6a15068c8",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -131,20 +159,6 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "f633f7350a492287094e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "job_postings_fact"
-              }
-            },
-            "Property": "job_no_degree_mention"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

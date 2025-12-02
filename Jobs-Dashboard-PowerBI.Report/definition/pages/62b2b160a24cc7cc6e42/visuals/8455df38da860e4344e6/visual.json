@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 336,
     "width": 1280,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "columnChart",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "job_postings_fact.job_title",
-              "nativeQueryRef": "job_title",
-              "active": true
+              "nativeQueryRef": "Job Positions",
+              "active": true,
+              "displayName": "Job Positions"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "job_postings_fact.job_title",
-              "nativeQueryRef": "job_title"
+              "nativeQueryRef": "Job Positions",
+              "displayName": "Job Positions"
             }
           ]
         },
@@ -69,7 +71,8 @@
                 }
               },
               "queryRef": "CountNonNull(job_postings_fact.job_title)",
-              "nativeQueryRef": "Count of job_title"
+              "nativeQueryRef": "Job Postings",
+              "displayName": "Job Postings"
             }
           ]
         }
@@ -97,6 +100,57 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Job Positions'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Number Of Job Positions'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
